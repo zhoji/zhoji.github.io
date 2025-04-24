@@ -79,14 +79,14 @@ Skills
   <span class="skill-item programming"><i class="fa fa-code"></i> MATLAB</span>
   <span class="skill-item programming"><i class="fa fa-code"></i> R</span>
   <span class="skill-item programming"><i class="fa fa-code"></i> LaTeX</span>
-  <span class="skill-item programming"><i class="fa fa-code"></i> HTML/CSS</span>
   <span class="skill-item tools"><i class="fa fa-terminal"></i> Git</span>
   <span class="skill-item tools"><i class="fa fa-terminal"></i> Bash</span>
   <span class="skill-item tools"><i class="fa fa-terminal"></i> HPC</span>
   <span class="skill-item tools"><i class="fa fa-terminal"></i> SLURM/SGE</span>
   <span class="skill-item tools"><i class="fa fa-database"></i> SQL</span>
   <span class="skill-item tools"><i class="fa fa-bar-chart"></i> JMP</span>
-  <span class="skill-item programming"><i class="fa fa-keyboard"></i> Prompt Engineering</span>
+  <span class="skill-item tools"><i class="fa fa-dna"></i> Nextflow</span>
+  <span class="skill-item tools"><i class="fa fa-dna"></i> nf-core</span>
   <span class="skill-item tools"><i class="fa fa-file-word"></i> MS Office</span>
   <span class="skill-item tools"><i class="fa fa-cogs"></i> Notion</span>
   <span class="skill-item lab"><i class="fa fa-flask"></i> ELISA</span>
