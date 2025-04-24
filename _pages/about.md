@@ -13,5 +13,5 @@ My recent work focuses on developing and utilizing advanced, quantitative MRI-ba
 
 Prior to work, I did a Master's thesis in Biomedical Imaging on MEG inference using ML at the [Brain Networks Lab](https://rajlab.ucsf.edu/) at UCSF, and my BA Honours dissertation on mathematical modeling of cone phototransduction with Dr. [Hugh Matthews](https://www.pdn.cam.ac.uk/directory/hugh-matthews) at the University of Cambridge.
 
-Feel free to contact me on social media if you want to talk more! :)
+In my free time, I love to travel, do yoga, make music, and cook and eat delicious food :) Feel free to contact me on social media if you want to talk more!
 
