@@ -8,6 +8,21 @@
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
+/* Color Palette Overrides */
+$raisin-black: #352f33;
+$onyx: #3d3c42;
+$raisin-black-2: #26282e;
+$misty-rose: #f1ddd8;
+$van-dyke: #473535;
+
+/* Optional: Map to default theme variables */
+$background-color: $misty-rose;
+$primary-color: $raisin-black;
+$accent-color: $van-dyke;
+$text-color: $onyx;
+$link-color: $van-dyke;
+$nav-color: $raisin-black-2;
+
 @import
     "vendor/breakpoint/breakpoint",
 
@@ -41,3 +56,22 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+// Header background
+.site-header {
+  background-color: $raisin-black-2;
+}
+
+// Footer
+.site-footer {
+  background-color: $raisin-black;
+  color: $misty-rose;
+}
+
+// Links
+a {
+  color: $van-dyke;
+}
+a:hover {
+  color: $onyx;
+}
