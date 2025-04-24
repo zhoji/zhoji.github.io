@@ -8,21 +8,6 @@
    sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
  */
 
-/* Color Palette Overrides */
-$raisin-black: #352f33;
-$onyx: #3d3c42;
-$raisin-black-2: #26282e;
-$misty-rose: #f1ddd8;
-$van-dyke: #473535;
-
-/* Optional: Map to default theme variables */
-$background-color: $misty-rose;
-$primary-color: $raisin-black;
-$accent-color: $van-dyke;
-$text-color: $onyx;
-$link-color: $van-dyke;
-$nav-color: $raisin-black-2;
-
 @import
     "vendor/breakpoint/breakpoint",
 
@@ -57,21 +42,81 @@ $nav-color: $raisin-black-2;
     "vendor/magnific-popup/magnific-popup"
 ;
 
-// Header background
-.site-header {
-  background-color: $raisin-black-2;
+// Light theme colors
+$raisin-black: #352f33;  // Dark reddish brown
+$onyx: #3d3c42;         // Deep grayish purple
+$raisin-black-2: #26282e; // Very dark grayish blue
+$misty-rose: #f1ddd8;   // Soft pinkish off-white
+$van-dyke: #473535;     // Warm brown
+
+// Dark theme colors
+$dark-raisin-black: #26282e; // Dark grayish blue for dark mode
+$dark-onyx: #3d3c42;        // Darker grayish purple for dark mode
+$dark-misty-rose: #f1ddd8;  // Light pinkish off-white for dark mode
+$dark-van-dyke: #473535;    // Warm brown for dark mode
+$night-link: #ffaea3;       // Soft warm pink for links in dark mode
+
+$background-color: $misty-rose !default;    // Light background color
+$text-color: $onyx !default;                 // Main text color
+$link-color: $van-dyke !default;             // Link color
+$brand-color: $raisin-black !default;        // Branding color (buttons, nav highlights)
+
+// Dark theme overrides
+$dark-background-color: $dark-raisin-black !default;  // Dark background
+$dark-text-color: $dark-misty-rose !default;         // Text color in dark mode
+$dark-link-color: $night-link !default;              // Link color in dark mode
+$dark-brand-color: $dark-van-dyke !default;          // Dark brand color
+
+/* Force application in key areas */
+body {
+  background-color: $background-color;
+  color: $text-color;
 }
 
-// Footer
-.site-footer {
-  background-color: $raisin-black;
-  color: $misty-rose;
-}
-
-// Links
 a {
-  color: $van-dyke;
+  color: $link-color;
 }
 a:hover {
-  color: $onyx;
+  color: darken($link-color, 10%);
 }
+
+/* Masthead + Footer for both modes */
+.site-header,
+.page__footer {
+  background-color: $brand-color;
+  color: $background-color;
+}
+
+/* Dark mode overrides using [data-theme] */
+[data-theme="dark"] body {
+  background-color: $dark-background-color;
+  color: $dark-text-color;
+}
+
+[data-theme="dark"] a {
+  color: $dark-link-color;
+}
+
+[data-theme="dark"] .site-header,
+[data-theme="dark"] .page__footer {
+  background-color: $dark-brand-color;
+  color: $dark-text-color;
+}
+
+// Light mode fixes
+//.site-header,
+//.page__footer {
+//  background-color: $raisin-black-2;
+//  color: $misty-rose;
+//}
+
+// Dark mode fixes
+//[data-theme="dark"] .site-header,
+//[data-theme="dark"] .page__footer {
+//  background-color: $raisin-black;
+//  color: $misty-rose;
+//}
+
+//[data-theme="dark"] a {
+//  color: $night-link;
+//}
