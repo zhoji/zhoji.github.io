@@ -70,7 +70,7 @@ $dark-brand-color: $dark-van-dyke !default;          // Dark brand color
 /* Force application in key areas */
 
 :root {
-  --global-bg-color: #f1ddd8;   // $misty-rose (light background)
+  --global-bg-color: #fff; // #f1ddd8;   // $misty-rose (light background)
   --global-text-color: #3d3c42; // $onyx (main text color)
   --skill-bg: #f7efec;         /* lighter than misty rose */
   --skill-text: #352f33;
@@ -88,7 +88,7 @@ html[data-theme="dark"] {
 }
 
 body {
-  background-color: $background-color;
+  background-color: #fff;
   color: $text-color;
 }
 
@@ -99,12 +99,25 @@ a:hover {
   color: darken($link-color, 10%);
 }
 
-/* Masthead + Footer for both modes */
 .site-header,
 .site-footer,
 .page__footer {
   background-color: $brand-color;
   color: $background-color;
+}
+
+.masthead,
+.greedy-nav,
+.masthead__menu-item {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+[data-theme="dark"] .masthead,
+[data-theme="dark"] .greedy-nav,
+[data-theme="dark"] .masthead__menu-item {
+  background-color: $dark-onyx;
+  color: $dark-text-color;
 }
 
 /* Dark mode overrides using [data-theme] */
