@@ -72,11 +72,19 @@ $dark-brand-color: $dark-van-dyke !default;          // Dark brand color
 :root {
   --global-bg-color: #f1ddd8;   // $misty-rose (light background)
   --global-text-color: #3d3c42; // $onyx (main text color)
+  --skill-bg: #f7efec;         /* lighter than misty rose */
+  --skill-text: #352f33;
+  --skill-bg-hover: #e3d2cd;
+  --skill-text-hover: #26282e;
 }
 
 html[data-theme="dark"] {
   --global-bg-color: #26282e;   // $raisin-black-2 (dark background)
   --global-text-color: #f1ddd8; // $misty-rose (light text on dark)
+  --skill-bg: #2f2f35;         /* lighter than raisin-black-2 */
+  --skill-text: #f1ddd8;
+  --skill-bg-hover: #403f47;
+  --skill-text-hover: #ffffff;
 }
 
 body {
@@ -118,3 +126,85 @@ a:hover {
   color: $dark-text-color;
 }
 
+/* Default (Light Mode) */
+.alt-text-jz {
+    color: rgba(53, 47, 51, 0.7); /* Lightened Raisin Black (#352f33), around 70% opacity */
+}
+
+/* Dark Mode */
+[data-theme="dark"] .alt-text-jz {
+        color: rgba(241, 221, 216, 0.7); /* Lightened Dark Misty Rose (#f1ddd8), around 70% opacity */
+}
+
+/* Container for two columns */
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds space between columns */
+}
+
+/* Left column */
+.two-columns .left-column {
+  flex: 1;
+  min-width: 300px; /* Optional: prevents columns from becoming too narrow */
+}
+
+/* Right column */
+.two-columns .right-column {
+  flex: 1;
+  min-width: 300px; /* Optional: prevents columns from becoming too narrow */
+}
+
+/* Filter Buttons */
+.skill-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn {
+  background-color: $misty-rose;
+  color: $raisin-black;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    background-color: darken($misty-rose, 5%);
+    color: $onyx;
+  }
+
+  &.active {
+    background-color: $van-dyke;
+    color: white;
+    border-color: $van-dyke;
+  }
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-item {
+  background-color: var(--skill-bg);
+  color: var(--skill-text);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  background-color: var(--skill-bg-hover);
+  color: var(--skill-text-hover);
+}
