@@ -68,6 +68,17 @@ $dark-link-color: $night-link !default;              // Link color in dark mode
 $dark-brand-color: $dark-van-dyke !default;          // Dark brand color
 
 /* Force application in key areas */
+
+:root {
+  --global-bg-color: #f1ddd8;   // $misty-rose (light background)
+  --global-text-color: #3d3c42; // $onyx (main text color)
+}
+
+html[data-theme="dark"] {
+  --global-bg-color: #26282e;   // $raisin-black-2 (dark background)
+  --global-text-color: #f1ddd8; // $misty-rose (light text on dark)
+}
+
 body {
   background-color: $background-color;
   color: $text-color;
@@ -82,6 +93,7 @@ a:hover {
 
 /* Masthead + Footer for both modes */
 .site-header,
+.site-footer,
 .page__footer {
   background-color: $brand-color;
   color: $background-color;
@@ -96,6 +108,9 @@ a:hover {
 [data-theme="dark"] a {
   color: $dark-link-color;
 }
+[data-theme="dark"] a:hover {
+  color: lighten($dark-link-color, 10%);
+}
 
 [data-theme="dark"] .site-header,
 [data-theme="dark"] .page__footer {
@@ -103,20 +118,3 @@ a:hover {
   color: $dark-text-color;
 }
 
-// Light mode fixes
-//.site-header,
-//.page__footer {
-//  background-color: $raisin-black-2;
-//  color: $misty-rose;
-//}
-
-// Dark mode fixes
-//[data-theme="dark"] .site-header,
-//[data-theme="dark"] .page__footer {
-//  background-color: $raisin-black;
-//  color: $misty-rose;
-//}
-
-//[data-theme="dark"] a {
-//  color: $night-link;
-//}
