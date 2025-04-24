@@ -79,13 +79,15 @@ $dark-brand-color: $dark-van-dyke !default;          // Dark brand color
 }
 
 html[data-theme="dark"] {
-  --global-bg-color: #26282e;   // $raisin-black-2 (dark background)
-  --global-text-color: #f1ddd8; // $misty-rose (light text on dark)
-  --skill-bg: #2f2f35;         /* lighter than raisin-black-2 */
-  --skill-text: #f1ddd8;
-  --skill-bg-hover: #403f47;
-  --skill-text-hover: #ffffff;
-  --global-dark-border-color: #52515a;
+  :root {
+    --global-bg-color: #26282e;   // $raisin-black-2 (dark background)
+    --global-text-color: #f1ddd8; // $misty-rose (light text on dark)
+    --skill-bg: #2f2f35;         /* lighter than raisin-black-2 */
+    --skill-text: #f1ddd8;
+    --skill-bg-hover: #403f47;
+    --skill-text-hover: #ffffff;
+    --global-dark-border-color: #52515a;
+   }
 }
 
 body {
