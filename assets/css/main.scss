@@ -95,10 +95,10 @@ body {
 }
 
 a {
-  color: $link-color;
+  color: lighten($link-color, 10%);
 }
 a:hover {
-  color: darken($link-color, 10%);
+  color: $link-color;
 }
 
 .site-header,
@@ -113,6 +113,7 @@ a:hover {
 .masthead__menu-item {
   background-color: $background-color;
   color: $text-color;
+  padding: 0px;
 }
 
 [data-theme="dark"] .masthead,
@@ -222,4 +223,57 @@ a:hover {
 .skill-item:hover {
   background-color: var(--skill-bg-hover);
   color: var(--skill-text-hover);
+}
+
+.greedy-nav .hidden-links {
+  background-color: $background-color;
+  border-color: $background-color;
+}
+
+.greedy-nav .hidden-links:after {
+  border-color: $background-color transparent;
+}
+
+html[data-theme='dark'] .hidden-links {
+  background-color: $dark-onyx;
+  border-color: lighten(#3d4048, 10%);
+}
+
+html[data-theme='dark'] .hidden-links:after {
+  border-color: lighten(#3d4048, 10%) transparent;
+}
+
+.captioned-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 4px;
+    filter: brightness(95%) contrast(100%) grayscale(10%);
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--global-muted-color); // or another soft tone
+    text-align: center;
+    width: 100%;
+    font-style: italic;
+  }
+}
+
+.captioned-image figcaption {
+  color: #888;
+}
+
+html[data-theme='dark'] .captioned-image figcaption {
+  color: #aaa;
 }
