@@ -108,7 +108,7 @@ I'd like to acknowledge Dr. Ashish Raj for his expertise and developing the SGM,
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const contentArea = document.querySelector("article.page");
-	const headings = contentArea ? contentArea.querySelectorAll("h2, h3") : [];
+    const headings = contentArea ? contentArea.querySelectorAll("h2, h3") : [];
     const toc = document.getElementById("toc");
     if (!toc || headings.length === 0) return;
 

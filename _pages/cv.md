@@ -8,6 +8,10 @@ redirect_from:
 ---
 
 {% include base_path %}
+<details class="toc-details">
+  <summary><strong>Navigation</strong></summary>
+  <nav id="toc"></nav>
+</details>
 
 Experience
 ------
@@ -23,7 +27,7 @@ Experience
 
 **Research Intern** - <span class="alt-text-jz">University of Texas Southwestern Medical Center</span>
 
-<p>Intern in Dr. Zhigao Wang’s lab in the Department of Molecular Biology. Studied how the herb *Citrullus colocynthis* kills cancer cells through necrosis. Developed a technique to detect phosphorylated proteins in Western blots.<br>
+<p>Intern in Dr. Zhigao Wang’s lab in the Department of Molecular Biology. Studied how the herb <i>Citrullus colocynthis</i> kills cancer cells through necrosis. Developed a technique to detect phosphorylated proteins in Western blots.<br>
 <span class="alt-text-jz">June ‘13 - Aug ‘14</span></p>
 
 Education
@@ -166,5 +170,33 @@ Available upon request.
         });
       });
     });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const contentArea = document.querySelector("div.archive");
+    const headings = contentArea ? contentArea.querySelectorAll("h2, h3") : [];
+    const toc = document.getElementById("toc");
+    if (!toc || headings.length === 0) return;
+
+    const list = document.createElement("ul");
+    headings.forEach(heading => {
+      if (!heading.id) {
+        heading.id = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+      }
+
+      const li = document.createElement("li");
+      li.style.marginLeft = heading.tagName === "H3" ? "1em" : "0";
+
+      const link = document.createElement("a");
+      link.href = `#${heading.id}`;
+      link.textContent = heading.textContent;
+
+      li.appendChild(link);
+      list.appendChild(li);
+    });
+
+    toc.appendChild(list);
   });
 </script>
