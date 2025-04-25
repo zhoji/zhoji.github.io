@@ -1,11 +1,134 @@
 ---
 title: "`Spectrome-AI`: a Neural Network Framework for Inferring MEG Spectra"
-excerpt: "A brief walkthrough of my Master's thesis where I trained a fully connected neural network on simulated MEG data for graph model parameter estimation.<br><br><img src='/images/mcmc_animated-small.gif'>"
+excerpt: "A brief walkthrough of my Master's thesis where I trained a fully connected neural network on simulated MEG data for graph model parameter estimation.<br><br><img src='/images/mcmc_animated-small-loop.gif'>"
 collection: portfolio
 ---
 
-Under construction!
+*Full thesis can be found on [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yc5CEBIAAAAJ&citation_for_view=Yc5CEBIAAAAJ:Tyk-4Ss8FVUC).*
 
-Abstract
+My Master's thesis with the [Brain Networks Lab](https://rajlab.ucsf.edu/) at UCSF focused on improving how we estimate parameters in computational models of the human brain, specifically using data from magnetoencephalography (MEG). These models help researchers understand how the brain's structure relates to its function, which is essentially how different regions of the brain connect and interact.
+
+<details class="toc-details">
+  <summary><strong>Navigation</strong></summary>
+  <nav id="toc"></nav>
+</details>
+
+Background
 ----
-Computational modeling is a tool that allows for biological systems involving large networks to be studied, such as in studying the correlations between structural connectivity and functional connectivity in the human brain. Raj et al. proposed the spectral graph model in 2019 as a linear, low-dimensional alternative to conventional neural field and mass models that are more computationally expensive, especially when optimizing parameters, which is necessary in order to obtain quantitative and qualitative information about functional neural activity. The initial method used for inferring the spectral graph model parameters was Markov chain Monte Carlo (MCMC) sampling, which provided a robust way to estimate what the target parameter distributions were most likely to be. However, MCMC methods are still slow and computationally expensive. In this study, we trained a fully connected neural network on MCMC-simulated magnetoencephalography (MEG) data to perform parameter estimation for the spectral graph model in an accelerated manner. We found that the neural network was able to predict most parameters of interest without much loss in precision while generating the parameters in less than a second. This approach puts us closer to obtaining real time neurophysiological information from functional neuroimaging data for applications in diagnosis, prognosis, and characterization of various neurological diseases.
+
+**Why MEG?**
+
+Early functional changes in neurological diseases such as autism, schizophrenia, epilepsy and dementia, are more readily and sensitively measured using MEG, which is a non-invasive way of measuring magnetic fields caused by direct neural activity with high temporal resolution. As seen below, the MEG power spectrum for healthy controls and subjects with Alzheimer’s disease presenting with various cognitive deficiencies is noticeably different, especially around the alpha band of frequencies (8-12 Hz), which is thought to represent resting-state brain activity.
+
+<figure class="captioned-image">
+  <img src="/images/meg.png" alt="meg" />
+  <figcaption>
+    Courtesy of S. Nagarajan (UCSF) and K. Ranasinghe (UCSF).
+  </figcaption>
+</figure>
+
+Understanding how the brain's structural wiring gives rise to its functional dynamics is a central challenge in neuroscience, and interpreting this relationship through MEG could help assess diagnosis of neurocognitive disorders and predict outcomes in a fast manner.
+
+**Spectral Graph Model**
+
+Traditional models, such as neural mass and neural field models, simulate brain activity by modeling local neuronal populations and their interactions. While these models can capture complex dynamics, they often require extensive computational resources and involve numerous parameters, making them less practical for large-scale or real-time applications.
+
+I worked with the spectral graph model (SGM), a relatively new and efficient approach proposed by [Raj et al](https://doi.org/10.1002/hbm.24991). SGM leverages the brain's structural connectome, represented as a graph where nodes correspond to brain regions and edges to white matter connections, to model functional activity. By applying spectral graph theory, SGM decomposes the structural connectivity into its eigenmodes, allowing for an analytical solution to the structure-function relationship.
+
+<figure class="captioned-image">
+  <img src="/images/sgm.jpeg" alt="sgm" />
+  <figcaption>
+    Adapted from Raj et al. (2020).
+  </figcaption>
+</figure>
+
+Originally, parameter estimation in this model relied on Markov chain Monte Carlo (MCMC) methods. MCMC is accurate but still computationally expensive and notoriously slow to converge. To speed things up, I trained a fully connected neural network (FCNN) on simulated MEG data generated by MCMC. The goal was to teach the neural network to estimate parameters much faster, without compromising too much accuracy.
+
+<figure class="captioned-image">
+  <img src="/images/mcmc_animated-small-loop.gif" alt="mcmc" />
+  <figcaption>
+    MCMC-generated MEG spectra // Courtesy of P. Damasceno (UCSF).
+  </figcaption>
+</figure>
+
+Training the Neural Network
+----
+
+The architecture of the FCNN built with `Keras/TensorFlow` consisted of three hidden layers, with the last layer comprising five nodes for each of the five global parameters for SGM: \\(τ_e\\), \\(τ_i\\), \\(α\\), \\(speed\\), and \\(τ_c\\)[^1]. Each hidden layer is followed by batch normalization and ReLU activation. Mean-squared error (MSE) was used as the cost function, and optimized using the Adam algorithm for stochastic optimization.
+
+<figure class="captioned-image">
+  <img src="/images/fcnn-architecture.png" alt="fcnn" />
+  <figcaption>
+    `Spectrome-AI` model architecture.
+  </figcaption>
+</figure>
+
+The dataset used to train the neural network was composed of 230,400 MCMC-simulated MEGs, consisting of spectra for the 86 parcellated regions of the brain, divided into 40 frequency bands, and their corresponding five global parameters. This simulated data was then split into a training set of 184,400 MEGs and an unseen validation set of 46,000 MEGs that was used to evaluate FCNN performance. Training was run for 200 epochs.
+
+Key Findings
+----
+
+**Neural Network Performance**
+
+The fully connected neural network (FCNN) trained on MCMC-simulated MEG data was able to accurately predict the majority of SGM parameters (\\(τ_e\\), \\(α\\), \\(speed\\); \\(R^2>0.84\\)). While some parameters (\\(τ_i\\) and \\(τ_c\\)) had slightly higher variance in prediction and signs of overfitting, the overall fidelity was preserved, and model behavior under predicted parameters was consistent with MCMC-derived ground truth.
+
+<figure class="captioned-image">
+  <img src="/images/fcnn-performance.png" alt="fcnn performance" />
+  <figcaption>
+    Training and cross-validation performance.
+  </figcaption>
+</figure>
+
+**Accelerated Prediction**
+
+The FCNN predicted parameters in less than one second, compared to MCMC methods that can take hours to days, depending on the data and convergence requirements. This massive improvement in inference time opens up potential real-time or near real-time applications for functional neuroimaging analysis.
+
+**Preservation of Functional Dynamics**
+
+Parameters predicted by the neural network were plugged back into the SGM, and the resulting simulated functional connectivity patterns closely matched those from MCMC-optimized parameters. This indicates that even with faster predictions, the neurophysiological integrity of the model output is maintained, making the neural network approach viable for scientific and clinical use.
+
+<figure class="captioned-image">
+  <img src="/images/fcnn-spectrum.png" alt="spectra generated from fcnn-predicted parameters" />
+  <figcaption>
+    MEG power spectra generated from SGM using parameters from `Spectrome-AI`.
+  </figcaption>
+</figure>
+
+This thesis demonstrates the potential of using computational models to generate large-scale datasets for training deep neural networks, specifically in the context of inferring model parameters from MEG power spectra. While simulated data was successfully leveraged, differences from experimental MEG recordings remain a limitation.
+
+The neural network trained in this study showed promise on simulated data but would benefit from longer training and integration of real MEG data for improved generalizability. Alternative architectures, such as CNNs or GANs, and further hyperparameter tuning may also enhance performance and efficiency. Lastly, this framework lays the groundwork for real-time parameter inference and potential clinical applications in distinguishing between healthy individuals and those with neurocognitive disorders based on MEG data.
+
+Notes
+----
+
+I'd like to acknowledge Dr. Ashish Raj for his expertise and developing the SGM, Dr. Pablo Damasceno for simulating the data necessary for this work and his mentorship throughout this entire project, and Dr. Xihe Xie for his work developing the SGM further.
+
+[^1]: Global parameters for SGM: \\(τ_e\\) is the time constant of excitatory neural response; \\(τ_i\\) is the time constant of inhibitory neural response; \\(α\\) is the global coupling constant controlling relative weight given to long-range afferents compared to local signals; \\(speed\\) is the neural response speed; \\(τ_c\\) is the graph/global time constant.
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const contentArea = document.querySelector("article.page");
+	const headings = contentArea ? contentArea.querySelectorAll("h2, h3") : [];
+    const toc = document.getElementById("toc");
+    if (!toc || headings.length === 0) return;
+
+    const list = document.createElement("ul");
+    headings.forEach(heading => {
+      if (!heading.id) {
+        heading.id = heading.textContent.toLowerCase().replace(/\s+/g, '-');
+      }
+
+      const li = document.createElement("li");
+      li.style.marginLeft = heading.tagName === "H3" ? "1em" : "0";
+
+      const link = document.createElement("a");
+      link.href = `#${heading.id}`;
+      link.textContent = heading.textContent;
+
+      li.appendChild(link);
+      list.appendChild(li);
+    });
+
+    toc.appendChild(list);
+  });
+</script>

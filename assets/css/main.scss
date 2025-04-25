@@ -257,7 +257,7 @@ html[data-theme='dark'] .hidden-links:after {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     padding: 4px;
-    filter: brightness(95%) contrast(100%) grayscale(10%);
+    background-color: $background-color;
   }
 
   figcaption {
@@ -274,6 +274,46 @@ html[data-theme='dark'] .hidden-links:after {
   color: #888;
 }
 
+html[data-theme='dark'] .captioned-image img {
+  background-color: $dark-onyx;
+}
+
 html[data-theme='dark'] .captioned-image figcaption {
   color: #aaa;
 }
+
+.toc-details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#toc ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+#toc li {
+  margin: 0.25rem 0;
+}
+
+#toc a {
+  text-decoration: none;
+  color: lighten($link-color, 10%);
+}
+
+#toc a:hover {
+  text-decoration: underline;
+  color: $link-color;
+}
+
+code {
+  background-color: #f4f4f4;
+  color: #352f33;
+}
+
+html[data-theme="dark"] code {
+  background-color: #3d3c42; // onyx or similar
+  color: #f1ddd8; // misty rose or light contrast
+}
+
