@@ -18,7 +18,7 @@ In my free time, I love to travel, do yoga, make music, and cook + eat delicious
 Feel free to contact me on social media if you want to talk more!
 
 <figure class="captioned-image">
-  <img src="../images/jiamin_squat.png" alt="meow" />
+  <img src="../images/jiamin_squat_crop.png" alt="meow" />
   <figcaption>
     The optimal pose for taking pics of stray cats // Chefchaouen, Oct 2022.
   </figcaption>
