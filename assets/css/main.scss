@@ -101,6 +101,12 @@ a:hover {
   color: $link-color;
 }
 
+img {
+  -webkit-touch-callout: none; /* Disable image long press menu on iOS */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .site-header,
 .site-footer,
 .page__footer {
