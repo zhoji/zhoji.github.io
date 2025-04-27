@@ -1,7 +1,11 @@
 zhoji's Personal & Academic Site
 ===
 
-To develop my own personal and academic website, I forked [this repo](https://academicpages.github.io/) from Academic Pages (a GitHub Pages template for personal and professional portfolio-oriented websites) and then added my own twist to it :)
+To develop my own personal and academic website, I forked [this repo](https://academicpages.github.io/) from Academic Pages (**a GitHub Pages template for personal and professional portfolio-oriented websites**) and then added my own twist to it :)
+
+![Homepage](images/jiamain_theme.jpg)
+
+I'll be periodically updating with new portfolio items and features!
 
 Notes
 ---
