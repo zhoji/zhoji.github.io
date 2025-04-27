@@ -1,0 +1,37 @@
+- url: /images/gallery/photo1.jpg
+  alt: "Mathematical Bridge"
+  title: "Mathematical Bridge at Queens' College"
+  caption: "One of the first pictures I took coming into Cambridge as a fresh first year student.<br><br>The Mathematical Bridge is a wooden footbridge that spans the River Cam. It's an example of geometric engineering, assembled entirely without the use of bolts or screws, just wooden joints.<br><br><i>Cambridge, Sep 2015</i>"
+- url: /images/gallery/photo2.jpg
+  alt: "Grand Palace"
+  title: "Phra Sri Rattana Chedi (พระศรีรัตนเจดีย์)"
+  caption: "Taken in the Grand Palace during a tour of various temples around Bangkok! A rare shot with not many people in it since we visited right as Thailand was opening back up to international travel after COVID. (Not pictured: me dying from heat and humidity.)<br><br>A bell-shaped Buddhist stupa constructed during Rama IV's reign. Rama V covered it with gold mosaic tiles from Italy.<br><br><i>Bangkok, Mar 2022</i>"
+- url: /images/gallery/photo4.jpg
+  alt: "The Narrows"
+  title: "Hiking the Narrows"
+  caption: "A unique hike in that you're wading through water! My favorite, partly because it was scorching outside and this was the only route that allowed some reprieve from the heat as you're in water and there's shade from the surrounding canyon walls. Highly recommend renting water shoes and a hiking stick.<br><br>A slot canyon hike in Zion National Park in southern Utah. The trail follows the Virgin River through a narrow, winding gorge.<br><br><i>Zion National Park, Jul 2022</i>"
+- url: /images/gallery/photo5.jpg
+  alt: "Hanalei Valley"
+  title: "Hanalei Valley Lookout"
+  caption: "A beautiful sunset that we witnessed off the north shore of Kauai.<br><br>Hanalei Valley is known for its vibrant green landscape, taro fields, and stunning backdrop of towering cliffs.<br><br><i>Kauai, Aug 2022</i>"
+- url: /images/gallery/photo6.jpg
+  alt: "Casa Mila"
+  title: "La Pedrera (Casa Milà)"
+  caption: "Truly a unique architectural style! Check out the rooftop for some surreal (aka, weird-looking) chimneys.<br><br>A modernist building by renowned architect Antoni Gaudí, Casa Milà is one of his most iconic works and a UNESCO World Heritage site. The building is known for its undulating stone façade, curved shapes, and wrought-iron balconies and windows.<br><br><i>Barcelona, Oct 2022</i>"
+- url: /images/gallery/photo7.jpg
+  alt: "Riad"
+  title: "Riad (رياض) in Marrakech"
+  caption: "A peaceful retreat from the busy streets of Marrakech. You get welcomed with fresh mint tea as well!<br><br>Riads are traditional Moroccan houses or palaces. The word comes from the Arabic for 'garden', reflecting the central design feature of an inner courtyard or garden surrounded by rooms. The layout is designed to provide privacy and tranquility.<br><br><i>Marrakech, Oct 2022</i>"
+- url: /images/gallery/photo3.jpg
+  alt: "Ben Youssef Madrasa"
+  title: "Entrance to the Ben Youssef Madrasa (مدرسة ابن يوسف)"
+  caption: "Some of the most stunning architecture and detailing I've ever seen.<br><br>A historic Islamic school with stunning architecture: intricate tile work, carved cedar wood, and beautiful stucco detailing. It was a center of learning and religious life for centuries, offering instruction in Islamic law, grammar, rhetoric, and other sciences.<br><br><i>Marrakech, Oct 2022</i>"
+- url: /images/gallery/photo9.jpg
+  alt: "Sahara Sunset"
+  title: "Sunset over the Sahara"
+  caption: "A multi-day journey by bus with many stops along the way led us to the Sahara Desert from Marrakech. Surprisingly, there was better cell service in the desert than some parts of SF!!<br><br><i>Hassilabied, Oct 2022</i>"
+- url: /images/gallery/photo8.jpg
+  alt: "Sahara Nightfall"
+  title: "Nightfall in the Sahara"
+  caption: "We rode dromedaries (separate from camels, which have two instead of just one hump!) a little bit into the desert. Once the sun started to set, we made our way over to a camp site to share a meal and rest before heading out the next day.<br><br><i>Hassilabied, Oct 2022</i>"
+# (add as many as you want!)
