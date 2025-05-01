@@ -261,23 +261,18 @@ html[data-theme='dark'] .hidden-links:after {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     background-color: $background-color;
   }
 
   figcaption {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: var(--global-muted-color); // or another soft tone
+    color: #888; // or another soft tone
     text-align: center;
     width: 100%;
     font-style: italic;
   }
-}
-
-.captioned-image figcaption {
-  color: #888;
 }
 
 html[data-theme='dark'] .captioned-image img {
