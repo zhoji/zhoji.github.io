@@ -44,7 +44,6 @@ redirect_from:
   <div class="portrait-col">
     <figure class="captioned-image-2">
       <img src="images/jiamin_violin_portrait.jpg" alt="violin">
-      <figcaption>I miss playing in orchestras</figcaption>
     </figure>
   </div>
 </div>
@@ -120,6 +119,10 @@ redirect_from:
 
   html[data-theme='dark'] .captioned-image-2 figcaption {
     color: #aaa;
+  }
+
+  .text-col p:first-of-type {
+    margin-top: -1.5rem;
   }
 
 </style>
