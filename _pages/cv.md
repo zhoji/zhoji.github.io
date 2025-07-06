@@ -103,7 +103,7 @@ Skills
 
 Publications
 ------
-K Khattab, LK Dziesinski, J Ornowski, **J Zhou**, NB Bonnheim, R Crawford, A Scheffler, AJ Fields, CW O’Neill, JC Lotz, & JF Bailey, "Spatial patterns of fat within the deep multifidus as a biomarker for chronic low back pain," The Spine Journal, Jul 2025. [doi:10.4274/dir.2024.242830](https://doi.org/10.1016/j.spinee.2025.07.022).
+K Khattab, LK Dziesinski, J Ornowski, **J Zhou**, NB Bonnheim, R Crawford, A Scheffler, AJ Fields, CW O’Neill, JC Lotz, & JF Bailey, "Spatial patterns of fat within the deep multifidus as a biomarker for chronic low back pain," The Spine Journal, Jul 2025. [doi:10.1016/j.spinee.2025.07.022](https://doi.org/10.1016/j.spinee.2025.07.022).
 
 MW Tong, **J Zhou**, Z Akkaya, S Majumdar, R Bhattacharjee, “Artificial intelligence in musculoskeletal applications: a primer for radiologists,” Diagn Interv Radiol, Aug 2024. [doi:10.4274/dir.2024.242830](https://doi.org/10.4274/dir.2024.242830).
 
