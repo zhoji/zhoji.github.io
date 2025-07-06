@@ -103,13 +103,15 @@ Skills
 
 Publications
 ------
+K Khattab, LK Dziesinski, J Ornowski, **J Zhou**, NB Bonnheim, R Crawford, A Scheffler, AJ Fields, CW O’Neill, JC Lotz, & JF Bailey, "Spatial patterns of fat within the deep multifidus as a biomarker for chronic low back pain," The Spine Journal, Jul 2025. [doi:10.4274/dir.2024.242830](https://doi.org/10.1016/j.spinee.2025.07.022).
+
 MW Tong, **J Zhou**, Z Akkaya, S Majumdar, R Bhattacharjee, “Artificial intelligence in musculoskeletal applications: a primer for radiologists,” Diagn Interv Radiol, Aug 2024. [doi:10.4274/dir.2024.242830](https://doi.org/10.4274/dir.2024.242830).
 
-NB Bonnheim, AA Lazar, A Kumar, Z Akkaya, **J Zhou**, X Guo, C O’Neill, TM Link, JC Lotz, R Krug, and AJ Fields, “ISSLS prize in bioengineering science 2023: Age- and sex-related differences in lumbar intervertebral disc degeneration between patients with chronic low back pain and asymptomatic controls,” Eur Spine J, 32(5):1517–1524, May 2023. [doi:10.1007/s00586-023-07542-6](https://doi.org/10.1007/s00586-023-07542-6).
+NB Bonnheim, AA Lazar, A Kumar, Z Akkaya, **J Zhou**, X Guo, C O’Neill, TM Link, JC Lotz, R Krug, and AJ Fields, “ISSLS prize in bioengineering science 2023: Age- and sex-related differences in lumbar intervertebral disc degeneration between patients with chronic low back pain and asymptomatic controls,” Eur Spine J, May 2023. [doi:10.1007/s00586-023-07542-6](https://doi.org/10.1007/s00586-023-07542-6).
 
 NB Bonnheim, L Wang, AA Lazar, R Chachad, **J Zhou**, X Guo, C O’Neill, J Castellanos, J Du, H Jang, R Krug, and AJ Fields, “Deep-learning-based biomarker of spinal cartilage endplate health using ultra-short echo time magnetic resonance imaging,” Quant Imaging Med Surg, 13(5):2807–2821, May 2023. [doi:10.21037/qims-22-729](https://doi.org/10.21037/qims-22-729).
 
-NB Bonnheim, L Wang, AA Lazar, **J Zhou**, R Chachad, N Sollmann, X Guo, C Iriondo, C O’Neill, JC Lotz, TM Link, R Krug, and AJ Fields, “The contributions of cartilage endplate composition and vertebral bone marrow fat to intervertebral disc degeneration in patients with chronic low back pain,” European Spine Journal, 2022. [doi:10.1007/s00586-022-07206-x](https://doi.org/10.1007/s00586-022-07206-x).
+NB Bonnheim, L Wang, AA Lazar, **J Zhou**, R Chachad, N Sollmann, X Guo, C Iriondo, C O’Neill, JC Lotz, TM Link, R Krug, and AJ Fields, “The contributions of cartilage endplate composition and vertebral bone marrow fat to intervertebral disc degeneration in patients with chronic low back pain,” European Spine Journal, 31(7):1866-1872, Apr 2022. [doi:10.1007/s00586-022-07206-x](https://doi.org/10.1007/s00586-022-07206-x).
 
 N Sollmann, NB Bonnheim, GB Joseph, R Chachad, **J Zhou**, Z Akkaya, AM Pirmoazen, JF Bailey, X Guo, AA Lazar, TM Link, AJ Fields, and R Krug, “Paraspinal muscle in chronic low back pain: Comparison between standard parameters and chemical shift encoding-based water-fat MRI,” Journal of Magnetic Resonance Imaging, 2022. [doi:10.1002/jmri.28145](https://doi.org/10.1002/jmri.28145).
 
