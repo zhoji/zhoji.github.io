@@ -1,0 +1,7 @@
+User-agent: *
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow: /
+
+Sitemap: https://zhoji.github.io/sitemap.xml
