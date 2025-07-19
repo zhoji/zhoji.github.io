@@ -1,81 +1,127 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Spectrome-AI
+description: a Neural Network Framework for Inferring MEG Spectra
+img: assets/img/projects/mcmc_animated-small-loop.gif
 importance: 1
-category: work
-related_publications: true
+category: school
+related_publications: false
+toc:
+  sidebar: left
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+My Master's thesis with the [Brain Networks Lab](https://rajlab.ucsf.edu/) at UCSF focused on improving how we estimate parameters in computational models of the human brain, specifically using data from magnetoencephalography (MEG). These models help researchers understand how the brain's structure relates to its function, which is essentially how different regions of the brain connect and interact.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+*Full thesis can be found on [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yc5CEBIAAAAJ&citation_for_view=Yc5CEBIAAAAJ:Tyk-4Ss8FVUC).*
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Background
+----
+
+**Why MEG?**
+
+Early functional changes in neurological diseases such as autism, schizophrenia, epilepsy and dementia, are more readily and sensitively measured using MEG, which is a non-invasive way of measuring magnetic fields caused by direct neural activity with high temporal resolution. As seen below, the MEG power spectrum for healthy controls and subjects with Alzheimer’s disease presenting with various cognitive deficiencies is noticeably different, especially around the alpha band of frequencies (8-12 Hz), which is thought to represent resting-state brain activity.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/meg.png" title="meg" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Courtesy of S. Nagarajan (UCSF) and K. Ranasinghe (UCSF).
 </div>
+
+Understanding how the brain's structural wiring gives rise to its functional dynamics is a central challenge in neuroscience, and interpreting this relationship through MEG could help assess diagnosis of neurocognitive disorders and predict outcomes in a fast manner.
+
+**Spectral Graph Model**
+
+Traditional models, such as neural mass and neural field models, simulate brain activity by modeling local neuronal populations and their interactions. While these models can capture complex dynamics, they often require extensive computational resources and involve numerous parameters, making them less practical for large-scale or real-time applications.
+
+I worked with the spectral graph model (SGM), a relatively new and efficient approach proposed by [Raj et al](https://doi.org/10.1002/hbm.24991). SGM leverages the brain's structural connectome, represented as a graph where nodes correspond to brain regions and edges to white matter connections, to model functional activity. By applying spectral graph theory, SGM decomposes the structural connectivity into its eigenmodes, allowing for an analytical solution to the structure-function relationship.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/sgm.jpeg" title="sgm" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Adapted from Raj et al. (2020).
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+Originally, parameter estimation in this model relied on Markov chain Monte Carlo (MCMC) methods. MCMC is accurate but still computationally expensive and notoriously slow to converge. To speed things up, I trained a fully connected neural network (FCNN) on simulated MEG data generated by MCMC. The goal was to teach the neural network to estimate parameters much faster, without compromising too much accuracy.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/projects/mcmc_animated-small-loop.gif" title="mcmc" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    MCMC-generated MEG spectra // Courtesy of P. Damasceno (UCSF).
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
+Training the Neural Network
+----
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+The architecture of the FCNN built with `Keras/TensorFlow` consisted of three hidden layers, with the last layer comprising five nodes for each of the five global parameters for SGM: \\(τ_e\\), \\(τ_i\\), \\(α\\), \\(speed\\), and \\(τ_c\\)[^1]. Each hidden layer is followed by batch normalization and ReLU activation. Mean-squared error (MSE) was used as the cost function, and optimized using the Adam algorithm for stochastic optimization.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/projects/fcnn-architecture.png" title="fcnn" class="img-fluid rounded z-depth-1" %}
+    </div>
 </div>
-```
+<div class="caption">
+    `Spectrome-AI` model architecture.
+</div>
 
-{% endraw %}
+The dataset used to train the neural network was composed of 230,400 MCMC-simulated MEGs, consisting of spectra for the 86 parcellated regions of the brain, divided into 40 frequency bands, and their corresponding five global parameters. This simulated data was then split into a training set of 184,400 MEGs and an unseen validation set of 46,000 MEGs that was used to evaluate FCNN performance. Training was run for 200 epochs.
+
+Key Findings
+----
+
+**Neural Network Performance**
+
+The fully connected neural network (FCNN) trained on MCMC-simulated MEG data was able to accurately predict the majority of SGM parameters (\\(τ_e\\), \\(α\\), \\(speed\\); \\(R^2>0.84\\)). While some parameters (\\(τ_i\\) and \\(τ_c\\)) had slightly higher variance in prediction and signs of overfitting, the overall fidelity was preserved, and model behavior under predicted parameters was consistent with MCMC-derived ground truth.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/projects/fcnn-performance.png" title="fcnn performance" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Training and cross-validation performance.
+</div>
+
+
+**Accelerated Prediction**
+
+The FCNN predicted parameters in less than one second, compared to MCMC methods that can take hours to days, depending on the data and convergence requirements. This massive improvement in inference time opens up potential real-time or near real-time applications for functional neuroimaging analysis.
+
+**Preservation of Functional Dynamics**
+
+Parameters predicted by the neural network were plugged back into the SGM, and the resulting simulated functional connectivity patterns closely matched those from MCMC-optimized parameters. This indicates that even with faster predictions, the neurophysiological integrity of the model output is maintained, making the neural network approach viable for scientific and clinical use.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/projects/fcnn-spectrum.png" title="fcnn spectra" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    MEG power spectra generated from SGM using parameters from `Spectrome-AI`.
+</div>
+
+This thesis demonstrates the potential of using computational models to generate large-scale datasets for training deep neural networks, specifically in the context of inferring model parameters from MEG power spectra. While simulated data was successfully leveraged, differences from experimental MEG recordings remain a limitation.
+
+The neural network trained in this study showed promise on simulated data but would benefit from longer training and integration of real MEG data for improved generalizability. Alternative architectures, such as CNNs or GANs, and further hyperparameter tuning may also enhance performance and efficiency. Lastly, this framework lays the groundwork for real-time parameter inference and potential clinical applications in distinguishing between healthy individuals and those with neurocognitive disorders based on MEG data.
+
+Notes
+----
+
+I'd like to acknowledge Dr. Ashish Raj for his expertise and developing the SGM, Dr. Pablo Damasceno for simulating the data necessary for this work and his mentorship throughout this entire project, and Dr. Xihe Xie for his work developing the SGM further.
+
+[^1]: Global parameters for SGM: \\(τ_e\\) is the time constant of excitatory neural response; \\(τ_i\\) is the time constant of inhibitory neural response; \\(α\\) is the global coupling constant controlling relative weight given to long-range afferents compared to local signals; \\(speed\\) is the neural response speed; \\(τ_c\\) is the graph/global time constant.
+
+<style>
+    .footnotes {
+        font-size: 0.8em;
+    }
+</style>

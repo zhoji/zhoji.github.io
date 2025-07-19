@@ -32,6 +32,20 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
+// Light theme colors
+$raisin-black: #352f33;  // Dark reddish brown
+$onyx: #3d3c42;         // Deep grayish purple
+$raisin-black-2: #26282e; // Very dark grayish blue
+$misty-rose: #f1ddd8;   // Soft pinkish off-white
+$van-dyke: #473535;     // Warm brown
+
+// Dark theme colors
+$dark-raisin-black: #26282e; // Dark grayish blue for dark mode
+$dark-onyx: #3d3c42;        // Darker grayish purple for dark mode
+$dark-misty-rose: #f1ddd8;  // Light pinkish off-white for dark mode
+$dark-van-dyke: #473535;    // Warm brown for dark mode
+$night-link: #ffaea3;       // Soft warm pink for links in dark mode
+
 // Theme colors
 
 $code-bg-color-light: rgba($purple-color, 0.05);
