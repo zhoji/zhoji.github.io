@@ -1,5 +1,5 @@
 <ul class="card-text font-weight-light list-group list-group-flush">
-<h6>Full list of citations can be seen at <a href="/publications/">Publications</a></h6>
+  <h6>Full list of citations can be seen at <a href="/publications/">Publications</a></h6>
   {% assign publications = data[1] | sort: 'releaseDate' | reverse %}
   {% for content in publications %}
     <li class="list-group-item">

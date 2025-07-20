@@ -222,15 +222,15 @@ ul.timeline li::before {
  * CV SKILL styles
  *****************************/
 
- :root {
-  --skill-bg: #f7efec;         /* lighter than misty rose */
+:root {
+  --skill-bg: #f7efec; /* lighter than misty rose */
   --skill-text: #352f33;
   --skill-bg-hover: #e3d2cd;
   --skill-text-hover: #26282e;
 }
 
 html[data-theme="dark"] {
-  --skill-bg: #2f2f35;         /* lighter than raisin-black-2 */
+  --skill-bg: #2f2f35; /* lighter than raisin-black-2 */
   --skill-text: #f1ddd8;
   --skill-bg-hover: #403f47;
   --skill-text-hover: #ffffff;
@@ -252,8 +252,11 @@ html[data-theme="dark"] {
   font-weight: 500;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-  line-height: 1.4; 
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  line-height: 1.4;
 
   &:hover {
     background-color: darken($misty-rose, 5%);
@@ -286,7 +289,7 @@ html[data-theme="dark"] {
   gap: 0.4rem;
   transition: all 0.3s ease;
   line-height: 1.4;
-  font-weight: 200;   
+  font-weight: 200;
 }
 
 .skill-item:hover {
