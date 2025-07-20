@@ -50,7 +50,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-new-website-format-sparkles-smile",
+            },},{id: "news-article-in-press-in-the-spine-journal-check-it-out-here",
+          title: 'Article in press in The Spine Journal: check it out here',
+          description: "",
+          section: "News",},{id: "news-new-website-format-sparkles-smile",
           title: 'New website format! :sparkles: :smile:',
           description: "",
           section: "News",},{id: "projects-spectrome-ai",
