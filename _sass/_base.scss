@@ -29,11 +29,11 @@ html {
 
 img {
   -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Safari */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version */
   pointer-events: none;
 }
 
@@ -465,19 +465,18 @@ ul.task-list input[type="checkbox"] {
 }
 
 @media (min-width: 576px) {
-    .social .contact-icons a {
-        font-size: 1.5rem;    /* increase icon size */
-        gap: .2rem;
-    }
+  .social .contact-icons a {
+    font-size: 1.5rem; /* increase icon size */
+    gap: 0.2rem;
+  }
 }
 
 @media (min-width: 768px) {
-    .profile .social .contact-icons a {
-        font-size: 2rem;   /* larger icons on bigger screens */
-        gap: .5rem;
-    }
+  .profile .social .contact-icons a {
+    font-size: 2rem; /* larger icons on bigger screens */
+    gap: 0.5rem;
+  }
 }
-
 
 .wechat-modal {
   display: none;

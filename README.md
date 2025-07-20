@@ -4,8 +4,7 @@ To develop my own personal and academic website, I forked [this repo](https://al
 
 I'll be periodically updating with new portfolio items and features!
 
-Notes
----
+## Notes
 
 **For running locally:** Run `bundle exec jekyll serve` to generate the HTML and the local server will automatically rebuild and refresh the pages on change. You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
 

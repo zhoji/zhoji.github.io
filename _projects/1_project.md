@@ -12,10 +12,9 @@ toc:
 
 My Master's thesis with the [Brain Networks Lab](https://rajlab.ucsf.edu/) at UCSF focused on improving how we estimate parameters in computational models of the human brain, specifically using data from magnetoencephalography (MEG). These models help researchers understand how the brain's structure relates to its function, which is essentially how different regions of the brain connect and interact.
 
-*Full thesis can be found on [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yc5CEBIAAAAJ&citation_for_view=Yc5CEBIAAAAJ:Tyk-4Ss8FVUC).*
+_Full thesis can be found on [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=Yc5CEBIAAAAJ&citation_for_view=Yc5CEBIAAAAJ:Tyk-4Ss8FVUC)._
 
-Background
-----
+## Background
 
 **Why MEG?**
 
@@ -58,9 +57,7 @@ Originally, parameter estimation in this model relied on Markov chain Monte Carl
     MCMC-generated MEG spectra // Courtesy of P. Damasceno (UCSF).
 </div>
 
-
-Training the Neural Network
-----
+## Training the Neural Network
 
 The architecture of the FCNN built with `Keras/TensorFlow` consisted of three hidden layers, with the last layer comprising five nodes for each of the five global parameters for SGM: \\(τ_e\\), \\(τ_i\\), \\(α\\), \\(speed\\), and \\(τ_c\\)[^1]. Each hidden layer is followed by batch normalization and ReLU activation. Mean-squared error (MSE) was used as the cost function, and optimized using the Adam algorithm for stochastic optimization.
 
@@ -75,8 +72,7 @@ The architecture of the FCNN built with `Keras/TensorFlow` consisted of three hi
 
 The dataset used to train the neural network was composed of 230,400 MCMC-simulated MEGs, consisting of spectra for the 86 parcellated regions of the brain, divided into 40 frequency bands, and their corresponding five global parameters. This simulated data was then split into a training set of 184,400 MEGs and an unseen validation set of 46,000 MEGs that was used to evaluate FCNN performance. Training was run for 200 epochs.
 
-Key Findings
-----
+## Key Findings
 
 **Neural Network Performance**
 
@@ -90,7 +86,6 @@ The fully connected neural network (FCNN) trained on MCMC-simulated MEG data was
 <div class="caption">
     Training and cross-validation performance.
 </div>
-
 
 **Accelerated Prediction**
 
@@ -113,8 +108,7 @@ This thesis demonstrates the potential of using computational models to generate
 
 The neural network trained in this study showed promise on simulated data but would benefit from longer training and integration of real MEG data for improved generalizability. Alternative architectures, such as CNNs or GANs, and further hyperparameter tuning may also enhance performance and efficiency. Lastly, this framework lays the groundwork for real-time parameter inference and potential clinical applications in distinguishing between healthy individuals and those with neurocognitive disorders based on MEG data.
 
-Notes
-----
+## Notes
 
 I'd like to acknowledge Dr. Ashish Raj for his expertise and developing the SGM, Dr. Pablo Damasceno for simulating the data necessary for this work and his mentorship throughout this entire project, and Dr. Xihe Xie for his work developing the SGM further.
 
