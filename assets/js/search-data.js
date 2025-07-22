@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-gallery",
           title: "gallery",
-          description: "Here&#39;s a selection of photos I&#39;ve taken during my travels! :)",
+          description: "Here&#39;s a selection of photos I&#39;ve taken during my travels! For full quality pictures, contact me.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/gallery/";
@@ -56,7 +56,12 @@ ninja.data = [{
           section: "News",},{id: "news-new-website-format-sparkles-smile",
           title: 'New website format! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-spectrome-ai",
+          section: "News",},{id: "projects-pdn-experimental-project",
+          title: 'PDN Experimental Project',
+          description: "Modelling calcium feedback mechanisms in light adaptation in vertebrate cone photoreceptors",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-spectrome-ai",
           title: 'Spectrome-AI',
           description: "a Neural Network Framework for Inferring MEG Spectra",
           section: "Projects",handler: () => {
