@@ -1,13 +1,29 @@
 ---
-layout: page
+layout: distill
 title: Spectrome-AI
 description: a Neural Network Framework for Inferring MEG Spectra
 img: assets/img/projects/mcmc_animated-small-loop.gif
 importance: 1
+date: 2019-09-06
 category: school
 related_publications: false
+authors:
+  - name: Jiamin Zhou
+    affiliations:
+      name: UCSF
 toc:
-  sidebar: left
+  - name: Background
+    subsections:
+      - name: Why MEG?
+      - name: Spectral Graph Model
+  - name: Training the Neural Network
+  - name: Key Findings
+    subsections:
+      - name: Neural Network Performance
+      - name: Accelerated Prediction
+      - name: Preservation of Functional Dynamics
+  - name: Notes
+bibliography: 2019-09-06-distill.bib
 ---
 
 My Master's thesis with the [Brain Networks Lab](https://rajlab.ucsf.edu/) at UCSF focused on improving how we estimate parameters in computational models of the human brain, specifically using data from magnetoencephalography (MEG). These models help researchers understand how the brain's structure relates to its function, which is essentially how different regions of the brain connect and interact.
@@ -16,9 +32,9 @@ _Full thesis can be found on [Google Scholar](https://scholar.google.com/citatio
 
 ## Background
 
-**Why MEG?**
+### Why MEG?
 
-Early functional changes in neurological diseases such as autism, schizophrenia, epilepsy and dementia, are more readily and sensitively measured using MEG, which is a non-invasive way of measuring magnetic fields caused by direct neural activity with high temporal resolution. As seen below, the MEG power spectrum for healthy controls and subjects with Alzheimer’s disease presenting with various cognitive deficiencies is noticeably different, especially around the alpha band of frequencies (8-12 Hz), which is thought to represent resting-state brain activity.
+Early functional changes in neurological diseases such as autism, schizophrenia, epilepsy and dementia, are more readily and sensitively measured using MEG, which is a non-invasive way of measuring magnetic fields caused by direct neural activity with high temporal resolution. As seen below, the MEG power spectrum for healthy controls and subjects with Alzheimer’s disease presenting with various cognitive deficiencies is noticeably different, especially around the alpha band of frequencies (8-12 Hz), which is thought to represent resting-state brain activity<d-cite key="kamalini2021neuronal"></d-cite>.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -31,11 +47,11 @@ Early functional changes in neurological diseases such as autism, schizophrenia,
 
 Understanding how the brain's structural wiring gives rise to its functional dynamics is a central challenge in neuroscience, and interpreting this relationship through MEG could help assess diagnosis of neurocognitive disorders and predict outcomes in a fast manner.
 
-**Spectral Graph Model**
+### Spectral Graph Model
 
-Traditional models, such as neural mass and neural field models, simulate brain activity by modeling local neuronal populations and their interactions. While these models can capture complex dynamics, they often require extensive computational resources and involve numerous parameters, making them less practical for large-scale or real-time applications.
+Traditional models, such as neural mass<d-cite key="david2003neural"></d-cite> and neural field<d-cite key="destexhe2009wilson"></d-cite> models, simulate brain activity by modeling local neuronal populations and their interactions. While these models can capture complex dynamics, they often require extensive computational resources and involve numerous parameters, making them less practical for large-scale or real-time applications.
 
-I worked with the spectral graph model (SGM), a relatively new and efficient approach proposed by [Raj et al](https://doi.org/10.1002/hbm.24991). SGM leverages the brain's structural connectome, represented as a graph where nodes correspond to brain regions and edges to white matter connections, to model functional activity. By applying spectral graph theory, SGM decomposes the structural connectivity into its eigenmodes, allowing for an analytical solution to the structure-function relationship.
+I worked with the spectral graph model (SGM), a relatively new and efficient approach proposed by Raj et al<d-cite key="raj2020spectral"></d-cite>. SGM leverages the brain's structural connectome, represented as a graph where nodes correspond to brain regions and edges to white matter connections, to model functional activity. By applying spectral graph theory, SGM decomposes the structural connectivity into its eigenmodes, allowing for an analytical solution to the structure-function relationship.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -46,7 +62,7 @@ I worked with the spectral graph model (SGM), a relatively new and efficient app
     Adapted from Raj et al. (2020).
 </div>
 
-Originally, parameter estimation in this model relied on Markov chain Monte Carlo (MCMC) methods. MCMC is accurate but still computationally expensive and notoriously slow to converge. To speed things up, I trained a fully connected neural network (FCNN) on simulated MEG data generated by MCMC. The goal was to teach the neural network to estimate parameters much faster, without compromising too much accuracy.
+Originally, parameter estimation in this model relied on Markov chain Monte Carlo (MCMC) methods<d-cite key="foreman2013emcee"></d-cite>. MCMC is accurate but still computationally expensive and notoriously slow to converge. To speed things up, I trained a fully connected neural network (FCNN) on simulated MEG data generated by MCMC. The goal was to teach the neural network to estimate parameters much faster, without compromising too much accuracy.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -59,7 +75,7 @@ Originally, parameter estimation in this model relied on Markov chain Monte Carl
 
 ## Training the Neural Network
 
-The architecture of the FCNN built with `Keras/TensorFlow` consisted of three hidden layers, with the last layer comprising five nodes for each of the five global parameters for SGM: \\(τ_e\\), \\(τ_i\\), \\(α\\), \\(speed\\), and \\(τ_c\\)[^1]. Each hidden layer is followed by batch normalization and ReLU activation. Mean-squared error (MSE) was used as the cost function, and optimized using the Adam algorithm for stochastic optimization.
+The architecture of the FCNN built with `Keras/TensorFlow` consisted of three hidden layers, with the last layer comprising five nodes for each of the five global parameters for SGM: $\tau_e$, $\tau_i$, $\alpha$, $speed$, and $\tau_c$.<d-footnote>Global parameters for SGM: $\tau_e$ is the time constant of excitatory neural response; $\tau_i$ is the time constant of inhibitory neural response; $\alpha$ is the global coupling constant controlling relative weight given to long-range afferents compared to local signals; $speed$ is the neural response speed; $\tau_c$ is the graph/global time constant.</d-footnote> Each hidden layer is followed by batch normalization and ReLU activation. Mean-squared error (MSE) was used as the cost function, and optimized using the Adam algorithm for stochastic optimization.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -70,13 +86,13 @@ The architecture of the FCNN built with `Keras/TensorFlow` consisted of three hi
     `Spectrome-AI` model architecture.
 </div>
 
-The dataset used to train the neural network was composed of 230,400 MCMC-simulated MEGs, consisting of spectra for the 86 parcellated regions of the brain, divided into 40 frequency bands, and their corresponding five global parameters. This simulated data was then split into a training set of 184,400 MEGs and an unseen validation set of 46,000 MEGs that was used to evaluate FCNN performance. Training was run for 200 epochs.
+The dataset used to train the neural network was composed of 230,400 MCMC-simulated MEGs, consisting of spectra for the 86 parcellated regions of the brain, divided into 40 frequency bands, and their corresponding five global parameters. This simulated data was then split into a training set of 184,400 MEGs and an unseen validation set of 46,000 MEGs that was used to evaluate FCNN performance. Training was run for 200 epochs on the Extreme Science and Engineering Discovery Environment (XSEDE) cluster Comet, hosted by the San Diego Supercomputer Center at UC San Diego, through allocation TG-IBN180015<d-cite key="towns2014xsede"></d-cite>.
 
 ## Key Findings
 
-**Neural Network Performance**
+### Neural Network Performance
 
-The fully connected neural network (FCNN) trained on MCMC-simulated MEG data was able to accurately predict the majority of SGM parameters (\\(τ_e\\), \\(α\\), \\(speed\\); \\(R^2>0.84\\)). While some parameters (\\(τ_i\\) and \\(τ_c\\)) had slightly higher variance in prediction and signs of overfitting, the overall fidelity was preserved, and model behavior under predicted parameters was consistent with MCMC-derived ground truth.
+The fully connected neural network (FCNN) trained on MCMC-simulated MEG data was able to accurately predict the majority of SGM parameters ($\tau_e$, $\alpha$, $speed$; $R^2>0.84$). While some parameters ($\tau_i$ and $\tau_c$) had slightly higher variance in prediction and signs of overfitting, the overall fidelity was preserved, and model behavior under predicted parameters was consistent with MCMC-derived ground truth.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -87,11 +103,11 @@ The fully connected neural network (FCNN) trained on MCMC-simulated MEG data was
     Training and cross-validation performance.
 </div>
 
-**Accelerated Prediction**
+### Accelerated Prediction
 
 The FCNN predicted parameters in less than one second, compared to MCMC methods that can take hours to days, depending on the data and convergence requirements. This massive improvement in inference time opens up potential real-time or near real-time applications for functional neuroimaging analysis.
 
-**Preservation of Functional Dynamics**
+### Preservation of Functional Dynamics
 
 Parameters predicted by the neural network were plugged back into the SGM, and the resulting simulated functional connectivity patterns closely matched those from MCMC-optimized parameters. This indicates that even with faster predictions, the neurophysiological integrity of the model output is maintained, making the neural network approach viable for scientific and clinical use.
 
@@ -110,12 +126,4 @@ The neural network trained in this study showed promise on simulated data but wo
 
 ## Notes
 
-I'd like to acknowledge Dr. Ashish Raj for his expertise and developing the SGM, Dr. Pablo Damasceno for simulating the data necessary for this work and his mentorship throughout this entire project, and Dr. Xihe Xie for his work developing the SGM further.
-
-[^1]: Global parameters for SGM: \\(τ_e\\) is the time constant of excitatory neural response; \\(τ_i\\) is the time constant of inhibitory neural response; \\(α\\) is the global coupling constant controlling relative weight given to long-range afferents compared to local signals; \\(speed\\) is the neural response speed; \\(τ_c\\) is the graph/global time constant.
-
-<style>
-    .footnotes {
-        font-size: 0.8em;
-    }
-</style>
+I'd like to acknowledge Dr. Pablo Damasceno for simulating the data necessary for this work and his mentorship throughout this entire project and Dr. Xihe Xie for his work developing the SGM further.

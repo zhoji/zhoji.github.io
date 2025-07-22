@@ -16,12 +16,12 @@ social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
@@ -29,6 +29,6 @@ I'm a **research associate** in the [Fields Lab for Orthopaedic Biomechanics and
 
 My recent work focuses on developing and utilizing **advanced, quantitative MRI-based methods** to characterize endplate damage and other spinal pathologies that are often overlooked in standard clinical assessments. I'm particularly interested in how we can move beyond conventional, descriptive imaging toward more **predictive**, mechanistic insights that support **personalized** approaches to treatment.
 
-Prior to work, I did a Master's thesis in Biomedical Imaging on **MEG inference using ML** at the [Brain Networks Lab](https://rajlab.ucsf.edu/) at UCSF, and my BA Honours dissertation on **mathematical modeling** of cone phototransduction with Dr. [Hugh Matthews](https://www.pdn.cam.ac.uk/directory/hugh-matthews) at the University of Cambridge.
+Prior to work, I did a Master's thesis in Biomedical Imaging on **MEG inference using ML** at the [Brain Networks Lab](https://rajlab.ucsf.edu/) at UCSF, and my BA Honours dissertation on **mathematical modeling** of cone phototransduction with [Dr. Hugh Matthews](https://www.pdn.cam.ac.uk/directory/hugh-matthews) at the University of Cambridge.
 
 In my free time, I love to **travel**, do **yoga**, and **cook + eat delicious food**. Check out my [gallery](/gallery/) for a few pictures from my travels! You can also check out my [Beli](https://beliapp.co/app/jiamineats) restaurant rankings, or add me as a friend on [NYT Games](https://www.nytimes.com/crosswords/apps?code=1d19cb3c-c5cd-4ea9-bf8e-ddaf54e67316).
