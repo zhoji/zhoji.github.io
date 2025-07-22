@@ -13,8 +13,10 @@ d-byline h3 {
 d-byline a,
 d-article d-byline a {
   color: var(--global-text-color) !important;
+  border-bottom: none !important;
   &:hover {
     color: var(--global-hover-color) !important;
+    border-bottom: none !important;
   }
 }
 
@@ -41,8 +43,10 @@ d-article {
   }
   a {
     color: var(--global-theme-color) !important;
+    border-bottom: none !important;
     &:hover {
-      color: var(--global-theme-color) !important;
+      color: var(--global-hover-color) !important;
+      border-bottom: none !important;
     }
   }
   b i {
@@ -97,7 +101,7 @@ d-article {
       a {
         border-bottom: none !important;
         &:hover {
-          border-bottom: 1px solid var(--global-text-color) !important;
+          color: var(--global-hover-color) !important;
         }
       }
       h3 {
@@ -151,15 +155,15 @@ d-article {
 
 d-appendix {
   border-top-color: var(--global-divider-color) !important;
-  color: var(--global-distill-app-color) !important;
+  color: var(--global-text-color) !important;
   h3,
   li,
   span {
-    color: var(--global-distill-app-color) !important;
+    color: var(--global-text-color) !important;
   }
   a,
   a.footnote-backlink {
-    color: var(--global-distill-app-color) !important;
+    color: var(--global-theme-color) !important;
     &:hover {
       color: var(--global-hover-color) !important;
     }
@@ -178,7 +182,7 @@ d-appendix {
       width: 100%;
       border: 1px solid var(--global-divider-color);
       nav {
-        grid-column: none;
+        grid-column: toc;
       }
     }
   }

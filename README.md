@@ -1,6 +1,6 @@
 # zhoji's Personal & Academic Site
 
-To develop my own personal and academic website, I forked [this repo](https://alshedivat.github.io/al-folio/) from al-folio (**A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**) and then added my own twist to it :)
+To develop my own personal and academic website, I forked [this repo](https://github.com/alshedivat/al-folio/) from [al-folio](https://alshedivat.github.io/al-folio/) (**A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**) and then added my own twist to it :)
 
 I'll be periodically updating with new portfolio items and features!
 
