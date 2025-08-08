@@ -14,16 +14,16 @@ authors:
 toc:
   - name: Background
     subsections:
-    - name: IDEAL MRI
+      - name: IDEAL MRI
   - name: Approach
     subsections:
-    - name: U-Net
-    - name: Training
+      - name: U-Net
+      - name: Training
   - name: Results
     subsections:
-    - name: Segmentation Accuracy
-    - name: Quantifying BMF
-    - name: Workflow Efficienty and Reliability
+      - name: Segmentation Accuracy
+      - name: Quantifying BMF
+      - name: Workflow Efficienty and Reliability
 
 bibliography: 2020-09-01-distill.bib
 ---
