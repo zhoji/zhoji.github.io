@@ -90,14 +90,31 @@
   ],
   "teaching": [
     {
-      "title": "Teaching Assistant",
-      "institution": "University of California, San Francisco",
-      "summary": "MR Pulse Sequences<p class='location' style='font-weight: 200'>Spring 2020</p><h6 style='font-size: 0.95rem'>Physical Principles of CT, PET, and SPECT Imaging</h6><p class='location' style='font-weight: 200'>Fall 2019</p>"
-    },
-    {
       "title": "Bootcamp Instructor",
       "institution": "University of California, San Francisco",
       "summary": "MSBI Bootcamp<p class='location' style='font-weight: 200'>Fall 2020, Fall 2021, Fall 2022</p><h6 style='font-size: 0.95rem'>Taught incoming Master’s students with no prior programming background how to code in MATLAB</h6>"
+    },
+    {
+      "title": "Teaching Assistant",
+      "institution": "University of California, San Francisco",
+      "summary": "MR Pulse Sequences<p class='location' style='font-weight: 200'>Spring 2020</p><h6 style='font-size: 0.95rem'>Physical Principles of CT, PET, and SPECT Imaging</h6><p class='location' style='font-weight: 200'>Fall 2019</p>"
+    }
+  ],
+  "talks": [
+    {
+      "title": "International Society for the Study of the Lumbar Spine",
+      "conference": "Atlanta, GA, USA, 2025",
+      "summary": "’Serum inflammatory profiles associate with intradiscal propionic acid levels in chronic low back pain patients with Modic changes’<p class='location' style='font-weight: 200'>oral presentation, shortlisted for Best Paper Award</p><h6 style='font-size: 0.95rem'>‘Modic changes associate with gut microbial dysbiosis'</h6><p class='location' style='font-weight: 200'>oral presentation</p>"
+    },
+    {
+      "title": "BACPAC Spring Meeting",
+      "conference": "Chapel Hill, NC, USA, 2025",
+      "summary": "’Phenotyping of comeBACK patients with Modic changes using MRI, MRS, and serum cytokines’<p class='location' style='font-weight: 200'>oral presentation</p>"
+    },
+    {
+      "title": "International Society for the Study of the Lumbar Spine",
+      "conference": "Milan, Italy, 2024",
+      "summary": "’Magnetic resonance spectroscopy biomarker of Modic changes with bacterial etiology’<p class='location' style='font-weight: 200'>oral presentation, shortlisted for Best Paper Award</p>"
     }
   ],
   "skills": [
@@ -108,7 +125,6 @@
       "keywords": [
         { "name": "Python", "icon": "fa-solid fa-code" },
         { "name": "Tensorflow", "icon": "fa-solid fa-code" },
-        { "name": "Matplotlib", "icon": "fa-solid fa-code" },
         { "name": "Matplotlib", "icon": "fa-solid fa-code" },
         { "name": "Seaborn", "icon": "fa-solid fa-code" },
         { "name": "Pandas", "icon": "fa-solid fa-code" },
@@ -182,23 +198,6 @@
       "releaseDate": "2023-05",
       "url": "https://doi.org/10.21037/qims-22-729",
       "summary": "<strong>Keywords:</strong> <em>cartilage endplate (CEP), low back pain, T2* relaxation time, disc degeneration, ultra-short echo time magnetic resonance imaging (UTE MRI)</em>"
-    }
-  ],
-  "talks": [
-    {
-      "title": "International Society for the Study of the Lumbar Spine",
-      "conference": "Atlanta, GA, USA, 2025",
-      "summary": "’Serum inflammatory profiles associate with intradiscal propionic acid levels in chronic low back pain patients with Modic changes’<p class='location' style='font-weight: 200'>oral presentation, shortlisted for Best Paper Award</p><h6 style='font-size: 0.95rem'>‘Modic changes associate with gut microbial dysbiosis'</h6><p class='location' style='font-weight: 200'>oral presentation</p>"
-    },
-    {
-      "title": "BACPAC Spring Meeting",
-      "conference": "Chapel Hill, NC, USA, 2025",
-      "summary": "’Phenotyping of comeBACK patients with Modic changes using MRI, MRS, and serum cytokines’<p class='location' style='font-weight: 200'>oral presentation</p>"
-    },
-    {
-      "title": "International Society for the Study of the Lumbar Spine",
-      "conference": "Milan, Italy, 2024",
-      "summary": "’Magnetic resonance spectroscopy biomarker of Modic changes with bacterial etiology’<p class='location' style='font-weight: 200'>oral presentation, shortlisted for Best Paper Award</p>"
     }
   ],
   "references": [

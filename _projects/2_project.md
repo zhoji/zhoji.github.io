@@ -3,7 +3,7 @@ layout: distill
 title: PDN Experimental Project
 description: Modelling calcium feedback mechanisms in light adaptation in vertebrate cone photoreceptors
 img: assets/img/projects/photocurrent.png
-importance: 2
+importance: 3
 date: 2018-04-25
 category: school
 related_publications: false
@@ -26,7 +26,7 @@ bibliography: 2018-04-25-distill.bib
 
 For my final year of undergraduate studies at Cambridge, I did an Experimental Project with [Dr. Hugh Matthews](https://www.pdn.cam.ac.uk/directory/hugh-matthews) in the Physiology, Development, and Neuroscience (PDN) Department on mathematical modelling of photocurrent in cone photoreceptors. Revealing how cones adapt to bright light illuminates the basis of daytime vision and informs the design of artificial photoreceptors and vision therapies. Although comprehensive models have been developed to describe rod phototransduction and adaptation under scotopic (low-light) conditions, these frameworks typically fail to account for the rapid gain adjustments and accelerated recovery kinetics characteristic of cones operating in the photopic (bright-light) region. Bridging this gap requires a minimal yet physiologically grounded model that incorporates cone-specific parameters and feedback loops.
 
-_If interested in learning more, contact me for the full dissertation._
+_If you're interested in learning more, [contact me](mailto:jiamin.zhou@ucsf.edu) for the full dissertation._
 
 ## Background
 

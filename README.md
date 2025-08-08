@@ -8,6 +8,8 @@ I'll be periodically updating with new portfolio items and features!
 
 **For running locally:** Run `bundle exec jekyll serve` to generate the HTML and the local server will automatically rebuild and refresh the pages on change. You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
 
+**Deploying with prettier:** Run `npx prettier . --check` to check for prettier formatting, `npx prettier . --write` to format all files.
+
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/main/LICENSE).
