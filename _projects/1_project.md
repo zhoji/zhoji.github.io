@@ -3,7 +3,7 @@ layout: distill
 title: Spectrome-AI
 description: a Neural Network Framework for Inferring MEG Spectra
 img: assets/img/projects/mcmc_animated-small-loop.gif
-importance: 1
+importance: 2
 date: 2019-09-06
 category: school
 related_publications: false

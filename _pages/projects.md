@@ -5,7 +5,7 @@ permalink: /projects/
 description: under construction - stay tuned for more!
 nav: true
 nav_order: 3
-display_categories: [school] # [work, fun]
+display_categories: [work, school] # [fun]
 horizontal: false
 ---
 
