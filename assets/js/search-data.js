@@ -66,6 +66,11 @@ ninja.data = [{
           description: "a Neural Network Framework for Inferring MEG Spectra",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-verteseg",
+          title: 'verteseg',
+          description: "Automatic vertebral body segmentation on IDEAL MRI",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
