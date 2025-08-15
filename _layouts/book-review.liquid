@@ -14,6 +14,9 @@ layout: default
 
 <div class="post">
   <header class="post-header">
+    <p style="margin-bottom:1rem;">
+      <a href="{{ '/books' | relative_url }}">← back to bookshelf</a>
+    </p>
     <h1 class="post-title">{{ page.title }}</h1>
     {% if page.author or page.released %}
       <p class="post-meta">
@@ -101,7 +104,7 @@ layout: default
     <hr>
   </header>
 
-  <article>
+  <article style="overflow: auto;">
     {% if content == '' %}
       <figure class="empty-review">
         {% if page.cover %}
@@ -162,10 +165,12 @@ layout: default
       figure {
         float: none;
         width: auto;
-        display: block;
+        /*display: block;
         margin-right: auto;
-        margin-left: auto;
-
+        margin-left: auto;*/
+        display: table;
+        margin:0 auto;
+        max-width:min(30%,380px);
       }
       figure  > img {
 
@@ -174,6 +179,8 @@ layout: default
            margin-right: 0px;
            margin-left: 0px;
            padding: 0px;
+           width:100% !important;
+           height:auto !important;
 
       }
       figure figcaption {
@@ -181,11 +188,18 @@ layout: default
         display: block;
         caption-side: bottom;
         text-align: center;
+        max-width:100%;
+        margin-top:.4rem;
+        font-size:.95rem;
+        line-height:1.35;
+        white-space:normal;
+        word-break:break-word;
+        overflow-wrap:anywhere;
       }
 
-      @media screen and (min-width: 600px)  {
+      @media screen and (min-width: 600px) {
 
-        .empty-review{
+        .empty-review {
           float: left;
           display: block; /* in-line block; */
           margin: 0px 0px 0px 0px;  /* adjust as needed */
@@ -212,7 +226,8 @@ layout: default
                 display: in-line block; /* in-line block; */
                 margin: 0px 0px 0px 0px;  /* adjust as needed */
                 padding: 0px 0px 0px 20px;
-               /* top right bottom left */
+                /* top right bottom left */
+
               }
 
           figure img {
@@ -228,14 +243,35 @@ layout: default
                   }
 
           .mobile-break { display: none; }
+      }
+
+      @media screen and (max-width: 599px) {
+        figure,
+        figure img {
+          width: 100% !important;
+          max-width: 100%;
+          height: auto !important;
+        }
+
+        figure {
+          float: none;
+          margin: 0 auto 1rem auto; /* center with spacing below */
+          display: block;
+        }
+
+        figure figcaption {
+          text-align: center; /* optional */
+        }
+      }
 
   /* =Blockquote
   -------------------------------------------------------------- */
   blockquote {
 
       position: relative;
-      marign: 0px;
+      margin: 0px;
       display: table;
+      font-size: 0.95rem;
 
   }
   blockquote:before, blockquote:after {

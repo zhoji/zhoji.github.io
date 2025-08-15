@@ -1,9 +1,9 @@
 ---
 layout: page
 title: gallery
-description: Here's a selection of photos I've taken during my travels! For full quality pictures, contact me.
+description: a selection of photos I took during my travels! for full quality pictures, contact me.
 permalink: /gallery/
-nav: true
+nav: false
 nav_order: 4
 ---
 

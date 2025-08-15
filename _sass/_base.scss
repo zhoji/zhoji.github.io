@@ -294,6 +294,16 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: var(--global-hover-color);
+  color: var(--global-bg-color) !important;
+
+  &:hover {
+    color: var(--global-bg-color);
+  }
+}
+
 .navbar.navbar-light {
   a {
     &:hover {
@@ -1387,12 +1397,21 @@ ninja-keys::part(ninja-input-wrapper) {
 }
 
 figure.cover {
-  display: inline-block;
+  display: inline-flex;
   text-align: center;
+  flex-direction: column;
+  justify-content: flex-end;
   margin: 0.5rem; /* adjust as needed */
 
   img {
-    vertical-align: bottom;
+    max-width: 100%;
+    display: block;
+  }
+
+  figcaption {
+    padding: 0.2rem 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   figcaption.abandoned {
