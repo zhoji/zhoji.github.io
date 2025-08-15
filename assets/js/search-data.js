@@ -23,13 +23,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-gallery",
-          title: "gallery",
-          description: "Here&#39;s a selection of photos I&#39;ve taken during my travels! For full quality pictures, contact me.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/gallery/";
-          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
@@ -37,11 +30,165 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "books-the-godfather",
-          title: 'The Godfather',
+        },{id: "dropdown-gallery",
+              title: "gallery",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/gallery/";
+              },
+            },{id: "dropdown-bookshelf",
+              title: "bookshelf",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/books/";
+              },
+            },{id: "books-all-the-light-we-cannot-see",
+          title: 'All the Light We Cannot See',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
+              window.location.href = "/books/all_the_light/";
+            },},{id: "books-the-midnight-library",
+          title: 'The Midnight Library',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_midnight_library/";
+            },},{id: "books-an-absolutely-remarkable-thing",
+          title: 'An Absolutely Remarkable Thing',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/an_absolutely_remarkable_thing/";
+            },},{id: "books-crying-in-h-mart",
+          title: 'Crying in H Mart',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/crying_in_h_mart/";
+            },},{id: "books-spqr",
+          title: 'SPQR',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/spqr/";
+            },},{id: "books-cloud-cuckoo-land",
+          title: 'Cloud Cuckoo Land',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/cloud_cuckoo_land/";
+            },},{id: "books-yellowface",
+          title: 'Yellowface',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/yellowface/";
+            },},{id: "books-under-the-whispering-door",
+          title: 'Under the Whispering Door',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/under_the_whispering_door/";
+            },},{id: "books-vera-wong-39-s-unsolicited-advice-for-murderers",
+          title: 'Vera Wong&amp;#39;s Unsolicited Advice for Murderers',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/vera_wong_1/";
+            },},{id: "books-disorientation",
+          title: 'Disorientation',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/disorientation/";
+            },},{id: "books-babel",
+          title: 'Babel',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/babel/";
+            },},{id: "books-tomorrow-and-tomorrow-and-tomorrow",
+          title: 'Tomorrow, and Tomorrow, and Tomorrow',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/tomorrow_x3/";
+            },},{id: "books-chip-war",
+          title: 'Chip War',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/chip_war/";
+            },},{id: "books-caste",
+          title: 'Caste',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/caste/";
+            },},{id: "books-exhalation",
+          title: 'Exhalation',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/exhalation/";
+            },},{id: "books-project-hail-mary",
+          title: 'Project Hail Mary',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/project_hail_mary/";
+            },},{id: "books-the-goldfinch",
+          title: 'The Goldfinch',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_goldfinch/";
+            },},{id: "books-how-to-win-friends-and-influence-people",
+          title: 'How to Win Friends and Influence People',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/win_friends/";
+            },},{id: "books-the-coddling-of-the-american-mind",
+          title: 'The Coddling of the American Mind',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_coddling/";
+            },},{id: "books-interior-chinatown",
+          title: 'Interior Chinatown',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/interior_chinatown/";
+            },},{id: "books-in-memoriam",
+          title: 'In Memoriam',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/in_memoriam/";
+            },},{id: "books-the-paper-menagerie",
+          title: 'The Paper Menagerie',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_paper_menagerie/";
+            },},{id: "books-pageboy",
+          title: 'Pageboy',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/pageboy/";
+            },},{id: "books-martyr",
+          title: 'Martyr!',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/martyr/";
+            },},{id: "books-pachinko",
+          title: 'Pachinko',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/pachinko/";
+            },},{id: "books-the-secret-history",
+          title: 'The Secret History',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_secret_history/";
+            },},{id: "books-vera-wong-39-s-guide-to-snooping-on-a-dead-man",
+          title: 'Vera Wong&amp;#39;s Guide to Snooping (on a Dead Man)',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/vera_wong_2/";
+            },},{id: "books-the-memory-police",
+          title: 'The Memory Police',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_memory_police/";
+            },},{id: "books-nexus",
+          title: 'Nexus',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/nexus/";
             },},{id: "news-first-personal-academic-website-published-on-github-pages",
           title: 'First personal/academic website published on GitHub Pages!',
           description: "",
