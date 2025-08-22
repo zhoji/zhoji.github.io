@@ -6,6 +6,99 @@ layout: page
 {% if page.collection and page.collection.size > 0 %}
   {% assign collection = site[page.collection] %}
   {% if collection and collection.size > 0 %}
+    <!-- ===== BOOKSHELF STATS ===== -->
+    {% assign total_books = 0 %}
+    {% assign finished_books = 0 %}
+    {% assign reading_books = 0 %}
+    {% assign queued_books = 0 %}
+    {% assign paused_books = 0 %}
+    {% assign abandoned_books = 0 %}
+    {% assign interested_books = 0 %}
+
+    {% assign fiction_counts = 0 %}
+    {% assign nonfiction_counts = 0 %}
+
+    {% for item in collection %}
+      {% assign total_books = total_books | plus: 1 %}
+
+      {% if item.status %}
+        {% assign status_norm = item.status | downcase | strip %}
+        {% if status_norm == 'finished' %}
+          {% assign finished_books = finished_books | plus: 1 %}
+        {% elsif status_norm == 'reading' %}
+          {% assign reading_books = reading_books | plus: 1 %}
+        {% elsif status_norm == 'queued' %}
+          {% assign queued_books = queued_books | plus: 1 %}
+        {% elsif status_norm == 'paused' %}
+          {% assign paused_books = paused_books | plus: 1 %}
+        {% elsif status_norm == 'abandoned' %}
+          {% assign abandoned_books = abandoned_books | plus: 1 %}
+        {% elsif status_norm == 'interested' %}
+          {% assign interested_books = interested_books | plus: 1 %}
+        {% endif %}
+      {% endif %}
+
+      {% if item.categories %}
+        {% for cat in item.categories %}
+          {% assign cat_norm = cat | downcase | strip %}
+          {% if cat_norm == 'fiction' -%}
+            {%- assign fiction_counts = fiction_counts | plus: 1 %}
+          {% elsif cat_norm == 'nonfiction' -%}
+            {%- assign nonfiction_counts = nonfiction_counts | plus: 1 %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="bookshelf-filters" style="display: flex; flex-wrap: wrap; justify-content: left; gap: 0.5rem; text-align: center;">
+      <!-- Status buttons -->
+      {% assign total_books = collection | size %}
+      <button class="filter-btn active" data-filter="all" style="font-weight:bold; display:flex; align-items:center; gap:0.3rem;">
+        All <span style="font-weight:normal; font-size:0.85em; color:#666;">{{ total_books }}</span>
+      </button>
+
+      {% assign status_list = 'Finished:finished,Reading:reading,Queued:queued,Paused:paused,Abandoned:abandoned,Interested:interested'
+        | split: ','
+      %}
+      {% for s in status_list %}
+        {% assign parts = s | split: ':' %}
+        {% assign label = parts[0] %}
+        {% assign key = parts[1] %}
+        {% assign count = 0 %}
+        {% if key == 'finished' -%}
+          {%- assign count = finished_books %}
+        {% elsif key == 'reading' -%}
+          {%- assign count = reading_books %}
+        {% elsif key == 'queued' -%}
+          {%- assign count = queued_books %}
+        {% elsif key == 'paused' -%}
+          {%- assign count = paused_books %}
+        {% elsif key == 'abandoned' -%}
+          {%- assign count = abandoned_books %}
+        {% elsif key == 'interested' -%}
+          {%- assign count = interested_books -%}
+        {%- endif %}
+
+        <button class="filter-btn" data-filter="status-{{ key }}" style="font-weight:bold; display:flex; align-items:center; gap:0.3rem;">
+          {{ label }}
+          <span style="font-weight:normal; font-size:0.85em; color:#666;">{{ count }}</span>
+        </button>
+      {% endfor %}
+    </div>
+    <div class="divider"></div>
+    <div
+      class="bookshelf-filters"
+      style="display: flex; flex-wrap: wrap; justify-content: left; gap: 0.5rem; text-align: center; margin-bottom: 1.5rem;"
+    >
+      <!-- Fiction/Nonfiction buttons -->
+      <button class="filter-btn" data-filter="category-fiction" style="font-weight:bold; display:flex; align-items:center; gap:0.3rem;">
+        Fiction <span style="font-weight:normal; font-size:0.85em; color:#666;">{{ fiction_counts }}</span>
+      </button>
+      <button class="filter-btn" data-filter="category-nonfiction" style="font-weight:bold; display:flex; align-items:center; gap:0.3rem;">
+        Nonfiction <span style="font-weight:normal; font-size:0.85em; color:#666;">{{ nonfiction_counts }}</span>
+      </button>
+    </div>
+
     {% for item in collection reversed %}
       {% assign current_year = item.started | default: item.date | date: '%Y' %}
       {% if current_year != year %}
@@ -19,7 +112,15 @@ layout: page
           {% assign year = current_year %}
       {% endif %}
 
-      <figure class="cover">
+      <figure
+        class="cover"
+        data-status="{{ item.status | downcase | strip }}"
+        {% if item.categories contains 'fiction' %}
+          data-category="fiction"
+        {% else %}
+          data-category="nonfiction"
+        {% endif %}
+      >
         <a class="cover-link" href="{{ item.url | relative_url }}">
           {% if item.cover %}
             <img alt="{{ item.title }} cover" src="{{ item.cover | prepend: page.covers | relative_url }}" style="height:200px">
@@ -66,4 +167,56 @@ layout: page
   blockquote {
     font-size: 0.95rem;
   }
+  /* Fiction/Nonfiction buttons */
+  .bookshelf-filters:last-of-type .filter-btn {
+    background-color: #d3d3d3;
+    color: #000;
+  }
+
+  .bookshelf-filters:last-of-type .filter-btn.active {
+    background-color: #555;
+    color: #fff;
+  }
+
+  .divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--global-footer-text-color);
+    margin: 0.5rem 0; /* equal spacing */
+    line-height: 0;
+  }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const figures = document.querySelectorAll('figure.cover');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Remove active class from all buttons
+        buttons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        if (filter === 'all') {
+          figures.forEach((fig) => (fig.style.display = 'inline-block'));
+          return;
+        }
+
+        figures.forEach((fig) => {
+          const matchesStatus = fig.dataset.status === filter.replace('status-', '');
+          const matchesCategory = fig.dataset.category === filter.replace('category-', '');
+
+          if (filter.startsWith('status-')) {
+            fig.style.display = matchesStatus ? 'inline-block' : 'none';
+          } else if (filter.startsWith('category-')) {
+            fig.style.display = matchesCategory ? 'inline-block' : 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
