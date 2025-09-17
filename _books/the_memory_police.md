@@ -17,8 +17,6 @@ goodreads_review:
 status: Paused
 ---
 
-Life's been busy--hoping to finish this book club book soon!
-
 ## Synopsis
 
 On an unnamed island off an unnamed coast, objects are disappearing: first hats, then ribbons, birds, roses—until things become much more serious. Most of the island's inhabitants are oblivious to these changes, while those few imbued with the power to recall the lost objects live in fear of the draconian Memory Police, who are committed to ensuring that what has disappeared remains forgotten.
