@@ -159,21 +159,31 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/pageboy/";
+            },},{id: "books-denison-avenue",
+          title: 'Denison Avenue',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/denison_avenue/";
             },},{id: "books-martyr",
           title: 'Martyr!',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/martyr/";
-            },},{id: "books-pachinko",
-          title: 'Pachinko',
+            },},{id: "books-minor-feelings",
+          title: 'Minor Feelings',
           description: "",
           section: "Books",handler: () => {
-              window.location.href = "/books/pachinko/";
+              window.location.href = "/books/minor_feelings/";
             },},{id: "books-the-secret-history",
           title: 'The Secret History',
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_secret_history/";
+            },},{id: "books-yolk",
+          title: 'Yolk',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/yolk/";
             },},{id: "books-vera-wong-39-s-guide-to-snooping-on-a-dead-man",
           title: 'Vera Wong&amp;#39;s Guide to Snooping (on a Dead Man)',
           description: "",
@@ -189,6 +199,16 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/nexus/";
+            },},{id: "books-real-americans",
+          title: 'Real Americans',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/real_americans/";
+            },},{id: "books-pachinko",
+          title: 'Pachinko',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/pachinko/";
             },},{id: "news-first-personal-academic-website-published-on-github-pages",
           title: 'First personal/academic website published on GitHub Pages!',
           description: "",
