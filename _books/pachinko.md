@@ -8,14 +8,16 @@ isbn: 9788383822723 # use ISBN to fetch cover (if no `olid` is provided, dashes 
 categories: fiction historical-fiction literary
 tags:
 buy_link: https://www.amazon.com/dp/1455563935/
-date: 2025-01-01
-started:
-finished:
+date: 2025-09-09
+started: 2025-09-09
+finished: 2025-09-11
 released: 2017
-stars:
+stars: 4
 goodreads_review:
-status: Interested
+status: Finished
 ---
+
+I struggled to rate this after finishing the book. While I appreciate the huge scope of the narrative, encompassing multiple generations over a tumultuous time period, I was left feeling unsatisfied at the end. Perhaps it had to do with pacing on the second half, as I felt less connected to the multiple characters that get introduced as time went on. The characters also did not have as much emotional depth or introspection, something I got more of when reading _Real Americans_. I did appreciate the metaphor of pachinko, where life is a sort of organized chaos -- historical events over which none of us individually have control that alter the course of our lives, and all we can do is make the best decision that we can based on our interpretation of the situation at the time (which may not have been the best move in hindsight).
 
 ## Synopsis
 
