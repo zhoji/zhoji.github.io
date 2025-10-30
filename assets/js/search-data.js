@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
+        },{id: "nav-gallery",
+          title: "gallery",
+          description: "a selection of photos I took during my travels! for full quality pictures, contact me.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/gallery/";
+          },
         },{id: "nav-cv",
           title: "cv",
           description: "",
@@ -30,21 +37,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "dropdown-gallery",
-              title: "gallery",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/gallery/";
-              },
-            },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/books/";
-              },
-            },{id: "books-all-the-light-we-cannot-see",
+        },{id: "books-all-the-light-we-cannot-see",
           title: 'All the Light We Cannot See',
           description: "",
           section: "Books",handler: () => {
