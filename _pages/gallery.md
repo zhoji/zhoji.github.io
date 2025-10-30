@@ -3,7 +3,7 @@ layout: page
 title: gallery
 description: a selection of photos I took during my travels! for full quality pictures, contact me.
 permalink: /gallery/
-nav: false
+nav: true
 nav_order: 4
 ---
 
