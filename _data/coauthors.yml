@@ -1,34 +1,39 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"fields":
+  - firstname: ["Aaron", "A.", "A. J.", "Aaron J."]
+    url: https://orthosurgery.ucsf.edu/research/faculty/aaron-fields
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"bonnheim":
+  - firstname: ["Noah", "N.", "N. B.", "Noah B."]
+    url: https://fieldslab.ucsf.edu/noah-bonnheim-phd
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"akkaya":
+  - firstname: ["Zehra", "Z."]
+    url: https://scholar.google.com/citations?user=b0eKogsAAAAJ&hl=tr
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"bailey":
+  - firstname: ["Jeannie", "J.", "J. F.", "Jeannie F."]
+    url: https://orthosurgery.ucsf.edu/research/jeannie-bailey
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"link":
+  - firstname: ["Thomas", "T.", "T. M.", "Thomas M."]
+    url: https://radiology.ucsf.edu/people/thomas-link
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"lotz":
+  - firstname: ["Jeffrey", "J.", "J. C.", "Jeffrey C."]
+    url: https://orthosurgery.ucsf.edu/research/faculty/jeffrey-lotz
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"krug":
+  - firstname: ["Roland", "R."]
+    url: https://msk.ucsf.edu/content/roland-krug-phd
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"damasceno":
+  - firstname: ["Pablo", "P.", "P. F.", "Pablo F."]
+    url: https://pfdamasceno.github.io/
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"o’neill":
+  - firstname: ["Conor", "C.", "C. W.", "Conor W."]
+    url: https://orthosurgery.ucsf.edu/patient-care/faculty/conor-oneill
+
+"dudli":
+  - firstname: ["Stefan", "S."]
+    url: https://www.balgrist.ch/en/research/research-units/research-in-physical-medicine-and-rheumatology/stefan-dudli/
