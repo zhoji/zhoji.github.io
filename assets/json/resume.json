@@ -106,7 +106,7 @@
       "date": "2023",
       "awarder": "International Society for the Study of the Lumbar Spine",
       "url": "https://link.springer.com/article/10.1007/s00586-023-07542-6",
-      "summary": "The ISSLS Prize program, sponsored by European Spine Journal, Springer, offers up to three awards of USD $20,000 each. Prizes are awarded competitively based on scientific merit in the following categories: Basic Science, Bioengineering Science, Clinical Science"
+      "summary": "Age- and sex-related differences in lumbar intervertebral disc degeneration between patients with chronic low back pain and asymptomatic controls"
     }
   ],
   "talks": [
@@ -155,7 +155,7 @@
         { "name": "SQL", "icon": "fa-solid fa-database" },
         { "name": "JMP", "icon": "fa-solid fa-bar-chart" },
         { "name": "Nextflow", "icon": "fa-solid fa-dna" },
-        { "name": "nf-core", "icon": "fa-solid fa-file-dna" },
+        { "name": "nf-core", "icon": "fa-solid fa-dna" },
         { "name": "MS Office", "icon": "fa-solid fa-file-word" },
         { "name": "Notion", "icon": "fa-solid fa-cogs" }
       ]
