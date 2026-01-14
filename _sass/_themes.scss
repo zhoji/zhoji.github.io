@@ -37,8 +37,8 @@
   --global-back-to-top-bg-hover-color: #e2c6c0;
   --global-back-to-top-bg-color: #{$misty-rose};
   --global-back-to-top-text-color: #{$raisin-black};
-  --global-newsletter-bg-color: #{$white-color};
-  --global-newsletter-text-color: #{$black-color};
+  --global-newsletter-bg-color: rgba(0, 0, 0, 0.1);
+  --global-newsletter-text-color: #{$onyx};
 
   /*--global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -135,8 +135,8 @@ html[data-theme="dark"] {
   --global-back-to-top-bg-hover-color: #5e4343;
   --global-back-to-top-bg-color: #{$dark-van-dyke};
   --global-back-to-top-text-color: #{$dark-misty-rose};
-  --global-newsletter-bg-color: #{$grey-color-light};
-  --global-newsletter-text-color: #{$grey-color-dark};
+  --global-newsletter-bg-color: #{$grey-color-dark};
+  --global-newsletter-text-color: #{$grey-color-light};
 
   /*--global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
