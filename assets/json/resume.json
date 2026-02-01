@@ -102,11 +102,18 @@
   ],
   "awards": [
     {
+      "title": "ISSLS Prize in Clinical Science",
+      "date": "2026",
+      "awarder": "International Society for the Study of the Lumbar Spine",
+      "url": "",
+      "summary": "Co-author of 'Data-driven classification of lumbar spine degeneration trajectories in chronic low back pain'"
+    },
+    {
       "title": "ISSLS Prize in Bioengineering Science",
       "date": "2023",
       "awarder": "International Society for the Study of the Lumbar Spine",
       "url": "https://link.springer.com/article/10.1007/s00586-023-07542-6",
-      "summary": "Age- and sex-related differences in lumbar intervertebral disc degeneration between patients with chronic low back pain and asymptomatic controls"
+      "summary": "Co-author of 'Age- and sex-related differences in lumbar intervertebral disc degeneration between patients with chronic low back pain and asymptomatic controls'"
     }
   ],
   "talks": [
