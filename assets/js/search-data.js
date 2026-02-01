@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "publications",
-          description: "publications by categories in reversed chronological order.",
+          description: "publications in reversed chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -222,7 +222,15 @@ ninja.data = [{
           section: "News",},{id: "news-article-available-in-the-european-spine-journal-check-it-out-here",
           title: 'Article available in the European Spine Journal: check it out here',
           description: "",
-          section: "News",},{id: "projects-pdn-experimental-project",
+          section: "News",},{id: "news-preprint-available-on-medrxiv-check-it-out-here",
+          title: 'Preprint available on medRxiv: check it out here',
+          description: "",
+          section: "News",},{id: "news-awarded-the-2026-issls-prize-in-clinical-science-as-a-co-author",
+          title: 'Awarded the 2026 ISSLS Prize in Clinical Science as a co-author',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_8/";
+            },},{id: "projects-pdn-experimental-project",
           title: 'PDN Experimental Project',
           description: "Modelling calcium feedback mechanisms in light adaptation in vertebrate cone photoreceptors",
           section: "Projects",handler: () => {
