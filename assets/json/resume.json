@@ -148,14 +148,34 @@
   ],
   "skills": [
     {
+      "name": "Research",
+      "level": "",
+      "icon": "fa-solid fa-flask",
+      "keywords": [
+        { "name": "Experimental Design", "icon": "fa-solid fa-flask" },
+        { "name": "MRI Physics", "icon": "fa-solid fa-x-ray" },
+        { "name": "Statistical Data Analysis", "icon": "fa-solid fa-chart-line" },
+        { "name": "Statistical Modeling", "icon": "fa-solid fa-chart-line" },
+        { "name": "Technical Writing", "icon": "fa-solid fa-pen-clip" },
+        { "name": "Clinical Database Management", "icon": "fa-solid fa-database" },
+        { "name": "REDCap", "icon": "fa-solid fa-database" },
+        { "name": "ELISA", "icon": "fa-solid fa-flask" },
+        { "name": "PCR", "icon": "fa-solid fa-flask" }
+      ]
+    },
+    {
       "name": "Programming",
       "level": "",
       "icon": "fa-solid fa-code",
       "keywords": [
         { "name": "Python", "icon": "fa-solid fa-code" },
+        { "name": "Numpy", "icon": "fa-solid fa-code" },
+        { "name": "Scipy", "icon": "fa-solid fa-code" },
+        { "name": "Scikit-learn", "icon": "fa-solid fa-code" },
         { "name": "Tensorflow", "icon": "fa-solid fa-code" },
         { "name": "Matplotlib", "icon": "fa-solid fa-code" },
         { "name": "Seaborn", "icon": "fa-solid fa-code" },
+        { "name": "Plotly", "icon": "fa-solid fa-code" },
         { "name": "Pandas", "icon": "fa-solid fa-code" },
         { "name": "Jupyter", "icon": "fa-solid fa-code" },
         { "name": "MATLAB", "icon": "fa-solid fa-code" },
@@ -178,15 +198,6 @@
         { "name": "nf-core", "icon": "fa-solid fa-dna" },
         { "name": "MS Office", "icon": "fa-solid fa-file-word" },
         { "name": "Notion", "icon": "fa-solid fa-cogs" }
-      ]
-    },
-    {
-      "name": "Laboratory",
-      "level": "",
-      "icon": "fa-solid fa-flask",
-      "keywords": [
-        { "name": "ELISA", "icon": "fa-solid fa-flask" },
-        { "name": "PCR", "icon": "fa-solid fa-flask" }
       ]
     },
     {
