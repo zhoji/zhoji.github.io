@@ -9,13 +9,13 @@ related_posts: false
 <div class="row mt-3 mb-3">
     <div class="col-sm-6 mt-3 mt-md-0">
     	<div class="rounded z-depth-1" style="height: 320px; overflow: hidden;">
-			{% include figure.liquid loading="eager" path="assets/img/posts/terence.JPEG" class="img-fluid rounded z-depth-1" %}
+			{% include figure.liquid loading="eager" path="assets/img/posts/terence.jpeg" class="img-fluid rounded z-depth-1" %}
 		</div>
 	</div>
     <div class="col-sm-6 mt-3 mt-md-0">
     	<div class="rounded z-depth-1" style="height: 320px; overflow: hidden;">
     		<div style="transform: translateY(-30%);">
-    			{% include figure.liquid loading="eager" path="assets/img/posts/terence1.JPEG" class="img-fluid rounded z-depth-1" %}
+    			{% include figure.liquid loading="eager" path="assets/img/posts/terence1.jpeg" class="img-fluid rounded z-depth-1" %}
     		</div>
     	</div>
     </div>
