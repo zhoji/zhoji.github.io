@@ -26,6 +26,6 @@ related_posts: false
 </center>
 <br />
 
-**Paper title**: Data-driven classification of lumbar spine degeneration trajectories in chronic low back pain
+**Paper title**: [Data-driven classification of lumbar spine degeneration trajectories in chronic low back pain](https://link.springer.com/article/10.1007/s00586-026-09840-1)
 
 It was an honor to work with Terence when he visited our lab in San Francisco on a Fulbright Scholarship in 2024 - super exciting and congratulations to him and all of the other co-authors on this achievement!
