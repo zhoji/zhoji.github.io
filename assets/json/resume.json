@@ -115,18 +115,25 @@
   ],
   "awards": [
     {
+      "title": "Best Paper Award",
+      "date": "2026",
+      "awarder": "International Society for the Study of the Lumbar Spine",
+      "url": "",
+      "summary": "Intradiscal propionic acid levels in chronic low back pain patients with modic type 1 changes are associated with systemic immune cell activation<div style='font-style: normal; font-weight: 200; font-size: 0.7rem;'><br />Jan Devan*, <u>Jiamin Zhou</u>*, Po-Hung Wu, Noah B. Bonnheim, Conor O'Neill, Oliver Distler, Jeffrey C. Lotz, Thomas M. Link, Aaron J. Fields, Stefan Dudli</div>"
+    },
+    {
       "title": "ISSLS Prize in Clinical Science",
       "date": "2026",
       "awarder": "International Society for the Study of the Lumbar Spine",
       "url": "https://link.springer.com/article/10.1007/s00586-026-09840-1",
-      "summary": "Co-author of 'Data-driven classification of lumbar spine degeneration trajectories in chronic low back pain'"
+      "summary": "Data-driven classification of lumbar spine degeneration trajectories in chronic low back pain<div style='font-style: normal; font-weight: 200; font-size: 0.7rem;'><br />Terence P. McSweeney, Zehra Akkaya, <u>Jiamin Zhou</u>, Po-Hung Wu, Noah B. Bonnheim, Thomas M. Link, Jaro Karppinen, Jeffrey C. Lotz, Simo Saarakkala, Aaron J. Fields, Aleksei Tiulpin</div>"
     },
     {
       "title": "ISSLS Prize in Bioengineering Science",
       "date": "2023",
       "awarder": "International Society for the Study of the Lumbar Spine",
       "url": "https://link.springer.com/article/10.1007/s00586-023-07542-6",
-      "summary": "Co-author of 'Age- and sex-related differences in lumbar intervertebral disc degeneration between patients with chronic low back pain and asymptomatic controls'"
+      "summary": "Age- and sex-related differences in lumbar intervertebral disc degeneration between patients with chronic low back pain and asymptomatic controls<div style='font-style: normal; font-weight: 200; font-size: 0.7rem;'><br />Noah B. Bonnheim, Ann A. Lazar, Anika Kumar, Zehra Akkaya, <u>Jiamin Zhou</u>, Xiaojie Guo, Conor O'Neill, Thomas M. Link, Jeffrey C. Lotz, Roland Krug, Aaron J. Fields</div>"
     }
   ],
   "talks": [
@@ -139,11 +146,6 @@
       "title": "BACPAC Spring Meeting",
       "conference": "Chapel Hill, NC, USA, 2025",
       "summary": "’Phenotyping of comeBACK patients with Modic changes using MRI, MRS, and serum cytokines’<p class='location' style='font-weight: 200'>oral presentation</p>"
-    },
-    {
-      "title": "International Society for the Study of the Lumbar Spine",
-      "conference": "Milan, Italy, 2024",
-      "summary": "’Magnetic resonance spectroscopy biomarker of Modic changes with bacterial etiology’<p class='location' style='font-weight: 200'>oral presentation, shortlisted for Best Paper Award</p>"
     }
   ],
   "skills": [
