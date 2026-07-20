@@ -230,7 +230,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_8/";
-            },},{id: "projects-pdn-experimental-project",
+            },},{id: "news-article-available-in-the-the-spine-journal-check-it-out-here",
+          title: 'Article available in the The Spine Journal: check it out here',
+          description: "",
+          section: "News",},{id: "projects-pdn-experimental-project",
           title: 'PDN Experimental Project',
           description: "Modelling calcium feedback mechanisms in light adaptation in vertebrate cone photoreceptors",
           section: "Projects",handler: () => {
